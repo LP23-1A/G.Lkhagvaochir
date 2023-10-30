@@ -4,6 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <section>
+      <div class="boards flex">
+        <div class="board flex column">
+          <div class="boardHeader flex">To do <span class="op">1</span></div>
+          <div class="cards flex column">
+            <div class="card flex gap12">
+              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <div class="details flex1 gap12 flex column">
+                <h4>Todo</h4>
+                <p>This is a todo card</p>
+                <div class="Priority">High</div>
+              </div>
+              <div class="actions flex gap8 column">
+                <img class="done" src="./imgs/x-mark.png" alt="" />
+                <img class="done" src="./imgs/edit.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="addBtns flex crs">
+            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <div>Add card</div>
+          </button>
+        </div>
+        <div class="board flex column">
+          <div class="boardHeader flex">
+            In progress<span class="op">1</span>
+          </div>
+          <div class="cards flex column">
+            <div class="card flex gap12">
+              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <div class="details flex1 gap12 flex column">
+                <h4>Todo</h4>
+                <p>This is a todo card</p>
+                <div class="Priority">High</div>
+              </div>
+              <div class="actions flex column gap8">
+                <img class="done" src="./imgs/x-mark.png" alt="" />
+                <img class="done" src="./imgs/edit.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="addBtns flex crs">
+            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <div>Add card</div>
+          </button>
+        </div>
+        <div class="board flex column">
+          <div class="boardHeader flex">Stuck<span class="op">1</span></div>
+          <div class="cards flex column">
+            <div class="card flex gap12">
+              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <div class="details flex1 gap12 flex column">
+                <h4>Todo</h4>
+                <p>This is a todo card</p>
+                <div class="Priority">High</div>
+              </div>
+              <div class="actions flex column gap8">
+                <img class="done" src="./imgs/x-mark.png" alt="" />
+                <img class="done" src="./imgs/edit.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="addBtns flex crs">
+            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <div>Add card</div>
+          </button>
+        </div>
+        <div class="board flex column">
+          <div class="boardHeader flex">Done<span class="op">1</span></div>
+          <div class="cards flex column">
+            <div class="card flex gap12">
+              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <div class="details flex1 gap12 flex column">
+                <h4>Todo</h4>
+                <p>This is a todo card</p>
+                <div class="Priority">High</div>
+              </div>
+              <div class="actions flex column">
+                <img class="done" src="./imgs/x-mark.png" alt="" />
+                <img class="done" src="./imgs/edit.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="addBtns flex crs">
+            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <div>Add card</div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- hover add -->
+    <div class="addTask flex">
+      <h1>Add Task</h1>
+      <div class="flex column">
+        <label name="title">Title</label><input type="text" />
+      </div>
+      <div class="flex column">
+        Description <input class="desc" type="text" />
+      </div>
+      <div class="flex column">Status <input type="text" /></div>
+      <div class="flex column">Priority <input type="text" /></div>
+      <button class="addBtn">Add Task</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
 </html>
