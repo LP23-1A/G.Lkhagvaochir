@@ -71,9 +71,9 @@ section {
   height: 20px;
   opacity: 0.6;
 }
-/* .cards {
+.cards {
   display: none;
-} */
+}
 .Priority {
   width: fit-content;
   padding: 4px 8px;
