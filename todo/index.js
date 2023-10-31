@@ -1,13 +1,24 @@
-let one = document.getElementById("one");
-let addTask = document.getElementById("two");
+// let one = document.getElementById("one");
+let modal = document.getElementById("two");
+let one = document.getElementsByClassName("addBtns");
+let overlay = document.querySelector(".overlay");
+// let modal = document.querySelector(".modal");
 
-one.onclick = function () {
-  addTask.style.display = "block";
-  addTask.style.display = "flex";
-  addTask.style.justifyContent = "spacebetween";
-};
-window.onclick = function (event) {
-  if (event.target === addTask) {
-    addTask.style.display = "none";
-  }
-};
+for (let i = 0; i < one.length; i++) {
+  one[i].onclick = function () {
+    modal.style.display = "flex";
+  };
+}
+
+function closeModal(event) {
+  event.stopPropagation();
+  modal.style.display = "none";
+}
+
+overlay.onclick = closeModal;
+
+// window.onclick = function (event) {
+//   if (event.target === modal) {
+//     modal.style.display = "none";
+//   }
+// };

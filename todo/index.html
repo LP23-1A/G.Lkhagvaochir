@@ -10,108 +10,133 @@
     <section>
       <div class="boards flex">
         <div class="board flex column">
-          <div class="boardHeader flex">To do <span class="op">1</span></div>
+          <div class="boardHeader flex">To do <span class="op">0</span></div>
           <div class="cards flex column">
             <div class="card flex gap12">
-              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>Todo</h4>
                 <p>This is a todo card</p>
                 <div class="Priority">High</div>
               </div>
-              <div class="actions flex gap8 column">
-                <img class="done" src="./imgs/x-mark.png" alt="" />
-                <img class="done" src="./imgs/edit.png" alt="" />
+              <div class="actions flex gap8 column crs">
+                <img class="done" src="./icons/x-mark.png" alt="" />
+                <img class="done" src="./icons/edit.png" alt="" />
               </div>
             </div>
           </div>
-          <button class="addBtns flex crs" id="one" onclick="open_modal()">
-            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+          <button class="addBtns flex crs" id="one">
+            <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
         </div>
+
         <div class="board flex column">
           <div class="boardHeader flex">
-            In progress<span class="op">1</span>
+            In progress<span class="op">0</span>
           </div>
           <div class="cards flex column">
             <div class="card flex gap12">
-              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>Todo</h4>
                 <p>This is a todo card</p>
                 <div class="Priority">High</div>
               </div>
-              <div class="actions flex column gap8">
-                <img class="done" src="./imgs/x-mark.png" alt="" />
-                <img class="done" src="./imgs/edit.png" alt="" />
+              <div class="actions flex column gap8 crs">
+                <img class="done" src="./icons/x-mark.png" alt="" />
+                <img class="done" src="./icons/edit.png" alt="" />
               </div>
             </div>
           </div>
           <button class="addBtns flex crs">
-            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
         </div>
+
         <div class="board flex column">
-          <div class="boardHeader flex">Stuck<span class="op">1</span></div>
+          <div class="boardHeader flex">Stuck<span class="op">0</span></div>
           <div class="cards flex column">
             <div class="card flex gap12">
-              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>Todo</h4>
                 <p>This is a todo card</p>
                 <div class="Priority">High</div>
               </div>
-              <div class="actions flex column gap8">
-                <img class="done" src="./imgs/x-mark.png" alt="" />
-                <img class="done" src="./imgs/edit.png" alt="" />
+              <div class="actions flex column gap8 crs">
+                <img class="done" src="./icons/x-mark.png" alt="" />
+                <img class="done" src="./icons/edit.png" alt="" />
               </div>
             </div>
           </div>
           <button class="addBtns flex crs">
-            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
         </div>
+
         <div class="board flex column">
-          <div class="boardHeader flex">Done<span class="op">1</span></div>
+          <div class="boardHeader flex">Done<span class="op">0</span></div>
           <div class="cards flex column">
             <div class="card flex gap12">
-              <img class="done" src="./imgs/check-mark.png" alt="" />
+              <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>Todo</h4>
                 <p>This is a todo card</p>
                 <div class="Priority">High</div>
               </div>
-              <div class="actions flex column">
-                <img class="done" src="./imgs/x-mark.png" alt="" />
-                <img class="done" src="./imgs/edit.png" alt="" />
+              <div class="actions flex column gap8 crs">
+                <img class="done" src="./icons/x-mark.png" alt="" />
+                <img class="done" src="./icons/edit.png" alt="" />
               </div>
             </div>
           </div>
           <button class="addBtns flex crs">
-            <i><img class="img" src="./imgs/plus.png" alt="" /></i>
+            <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- hover add -->
+    <!-- modal -->
 
-    <div class="addTask-Container">
-      <div class="addTask flex" id="two">
+    <div class="modal" id="two">
+      <div class="overlay"></div>
+      <div class="addTask flex">
         <h1>Add Task</h1>
         <div class="flex column">
-          <label name="title">Title</label><input type="text" />
+          <label name="">Title</label><input class="text1" type="text" />
         </div>
-        <div class="flex column">
-          Description <input class="desc" type="text" />
+
+        <div>
+          <label for="">Description</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
-        <div class="flex column">Status <input type="text" /></div>
-        <div class="flex column">Priority <input type="text" /></div>
-        <button class="addBtn">Add Task</button>
+
+        <div>
+          <label for="">Status</label>
+          <select name="Status" class="text1" id="">
+            <option value="To do">To do</option>
+            <option value="In progress">In progress</option>
+            <option value="Stuck">Stuck</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="">Priority</label>
+          <select class="text1" id="">
+            <p>Status</p>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <button class="addBtn crs">Add Task</button>
       </div>
     </div>
     <script src="./index.js"></script>
