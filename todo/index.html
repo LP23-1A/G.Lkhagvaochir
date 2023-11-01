@@ -11,7 +11,7 @@
       <div class="boards flex">
         <div class="board flex column">
           <div class="boardHeader flex">To do <span class="op">0</span></div>
-          <div class="cards column">
+          <div class="cards column" id="cardss">
             <div class="card flex gap12">
               <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
@@ -78,21 +78,11 @@
         </div>
 
         <div class="board flex column">
-          <div class="boardHeader flex">Done<span class="op">0</span></div>
-          <div class="cards flex column">
-            <div class="card flex gap12">
-              <img class="done crs" src="./icons/check-mark.png" alt="" />
-              <div class="details flex1 gap12 flex column">
-                <h4>Todo</h4>
-                <p>This is a todo card</p>
-                <div class="Priority">High</div>
-              </div>
-              <div class="actions flex column gap8 crs">
-                <img class="done" src="./icons/x-mark.png" alt="" />
-                <img class="done" src="./icons/edit.png" alt="" />
-              </div>
-            </div>
+          <div class="boardHeader flex">
+            Done<span class="op">0</span>
+            <div class="cards flex column" id="done"></div>
           </div>
+          <!--  -->
           <button class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
@@ -108,12 +98,13 @@
       <div class="addTask flex">
         <h1>Add Task</h1>
         <div class="flex column">
-          <label name="">Title</label><input class="text1" type="text" />
+          <label name="">Title</label>
+          <input id="title" class="text1" type="text" />
         </div>
 
         <div>
           <label for="">Description</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="textarea" cols="30" rows="10"></textarea>
         </div>
 
         <div>

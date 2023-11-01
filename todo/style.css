@@ -51,12 +51,14 @@ section {
   gap: 8px;
   border-radius: 8px;
   padding: 8px;
+  height: fit-content;
 }
 .boardHeader {
   padding: 8px;
   font-size: 20px;
   font-weight: 600;
   gap: 12px;
+  flex-direction: column;
 }
 .cards {
   padding: 8px;
@@ -71,9 +73,9 @@ section {
   height: 20px;
   opacity: 0.6;
 }
-.cards {
+/* .cards {
   display: none;
-}
+} */
 .Priority {
   width: fit-content;
   padding: 4px 8px;
@@ -88,7 +90,7 @@ section {
 .addBtns {
   padding: 8px;
   gap: 16px;
-  border: solid 0px;
+  border: none;
   background: #ebecf0;
 }
 
