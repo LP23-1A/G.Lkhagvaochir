@@ -73,10 +73,20 @@ section {
   height: 20px;
   opacity: 0.6;
 }
+.edit {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+.remove {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
 /* .cards {
   display: none;
 } */
-.Priority {
+.priority {
   width: fit-content;
   padding: 4px 8px;
   border-radius: 8px;
