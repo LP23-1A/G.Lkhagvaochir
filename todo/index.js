@@ -17,22 +17,35 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-addBtn.onclick = addTask;
-
+// addBtn.onclick = addTask;
 overlay.onclick = closeModal;
+const data = [];
 
-const data = [
-  {
-    title: "todo",
-    desc: "this a todo card",
-    status: "done",
-    priority: "high",
-  },
-];
-
-function addTask(cards) {
-  let done = document.querySelectorAll(".cards");
-  const { title, desc, priority } = cards;
+function render(data) {
+  const cards = document.getElementsByClassName("cards");
+  cards.innerHTML = "";
+  for (let i = 0; i < data.length; i++) {
+    cards[i].innerHTML += addTask(data[i]);
+  }
+}
+function addCard() {
+  modal.style.display = "none";
+  console.log("is working");
+  const mockData = {
+    title: "",
+    desc: "",
+    status: "",
+    priority: "",
+  };
+  mockData.title = "todo1";
+  mockData.desc = "yuch bish";
+  mockData.status = "done";
+  mockData.priority = "low";
+  data.push(mockData);
+  render(data);
+}
+function addTask(card) {
+  const { title, desc, priority } = card;
   return `<div class="card flex gap12">
               <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
@@ -45,6 +58,6 @@ function addTask(cards) {
                 <img class="edit" src="./icons/edit.png" alt="" />
               </div>
             </div>`;
-
-  closeModal();
 }
+closeModal();
+// render(data);

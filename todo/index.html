@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section>
       <div class="boards flex">
         <div class="board flex column">
-          <div class="boardHeader flex">To do <span class="op">0</span></div>
+          <div class="boardHeader">To do <span class="op">0</span></div>
+
           <div class="cards column" id="cardss"></div>
           <button class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
@@ -19,9 +26,8 @@
         </div>
 
         <div class="board flex column">
-          <div class="boardHeader flex">
-            In progress<span class="op">0</span>
-          </div>
+          <div class="boardHeader">Inprogress <span class="op">0</span></div>
+
           <div class="cards flex column"></div>
           <button class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
@@ -30,7 +36,7 @@
         </div>
 
         <div class="board flex column">
-          <div class="boardHeader flex">Stuck<span class="op">0</span></div>
+          <div class="boardHeader">Stuck <span class="op">0</span></div>
           <div class="cards flex column"></div>
           <button class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
@@ -39,10 +45,8 @@
         </div>
 
         <div class="board flex column">
-          <div class="boardHeader flex">
-            Done<span class="op">0</span>
-            <div class="cards flex column"></div>
-          </div>
+          <div class="boardHeader">Done <span class="op">0</span></div>
+          <div class="cards flex column"></div>
           <button class="addBtns flex crs" ()>
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
@@ -87,7 +91,7 @@
           </select>
         </div>
 
-        <button class="addBtn crs">Add Task</button>
+        <button class="addBtn crs" onclick="addCard()">Add Task</button>
       </div>
     </div>
     <script src="./index.js"></script>
