@@ -16,18 +16,19 @@
     <section>
       <div class="boards flex">
         <div class="board flex column">
-          <div class="boardHeader">To do <span class="op">0</span></div>
+          <div class="boardHeader">
+            To do <span id="output" class="op">0</span>
+          </div>
 
           <div class="cards column" id="cardss"></div>
-          <button class="addBtns flex crs">
+          <button onclick="countClick()" class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
         </div>
 
         <div class="board flex column">
-          <div class="boardHeader">Inprogress <span class="op">0</span></div>
-
+          <div class="boardHeader">In progress <span class="op">0</span></div>
           <div class="cards flex column"></div>
           <button class="addBtns flex crs">
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
