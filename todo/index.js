@@ -34,7 +34,6 @@ function render(data) {
   cards[1].innerHTML = "";
   cards[2].innerHTML = "";
   cards[3].innerHTML = "";
-  console.log(data);
   for (let i = 0; i < data.length; i++) {
     if (data[i].status === "To do") {
       cards[0].innerHTML += addTask(data[i]);
@@ -50,7 +49,8 @@ function render(data) {
 function addCard() {
   cards.innerHTML = "";
   modal.style.display = "none";
-  const uid = Math.random();
+  const uid = "id-" + Math.random();
+  // count = count + 1;
 
   const mockData = {
     id: uid,
@@ -61,17 +61,31 @@ function addCard() {
   };
   const input = document.querySelector("input");
   const textarea = document.querySelector("textarea");
-  const select = document.querySelector("select");
+  const select = document.querySelectorAll("select");
   mockData.title = input.value;
   mockData.desc = textarea.value;
-  mockData.status = select.value;
-  mockData.priority = select.value;
+  mockData.status = select[0].value;
+  mockData.priority = select[1].value;
+  if (mockData.status === "To do") {
+    count.todo += 1;
+  } else if (mockData.status === "In progress") {
+    count.inprogress += 1;
+  } else if (mockData.status === "Stuck") {
+    count.stuck += 1;
+  } else if (mockData.status === "Done") {
+    count.done += 1;
+  }
+  console.log(count);
+  Todo.innerHTML = count.todo;
+  Inprogress.innerHTML = count.inprogress;
+  Stuck.innerHTML = count.stuck;
+  Done.innerHTML = count.done;
   data.push(mockData);
   render(data);
 }
 function addTask(card) {
   const { title, desc, priority, id } = card;
-  return `<div id="rem" id="${id}" class="card flex gap12">
+  return `<div id="${id}" class="card flex gap12">
               <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>${title}</h4>
@@ -85,17 +99,44 @@ function addTask(card) {
             </div>`;
 }
 function removeF(id) {
-  const a = data.filter((e) => e.id !== id);
+  let elementId = "id" + id;
+  let element = null;
+  const a = data.filter((e) => {
+    if (e.id === elementId) {
+      element = e;
+    } else {
+      return true;
+    }
+    return false;
+  });
   data = a;
+
+  if (element.status === "To do") {
+    count.todo -= 1;
+  } else if (element.status === "In progress") {
+    count.inprogress -= 1;
+  } else if (element.status === "Stuck") {
+    count.stuck -= 1;
+  } else if (element.status === "Done") {
+    count.done -= 1;
+  }
+  Todo.innerHTML = count.todo;
+  Inprogress.innerHTML = count.inprogress;
+  Stuck.innerHTML = count.stuck;
+  Done.innerHTML = count.done;
+
   render(data);
 }
 closeModal();
 
-let count = 0;
-let output = document.getElementById("output");
-function countClick() {
-  count = count + "";
-  output.innerHTML = count;
-}
-countClick();
 // render(data);
+let count = {
+  todo: 0,
+  inprogress: 0,
+  stuck: 0,
+  done: 0,
+};
+let Todo = document.querySelector(".Todo");
+let Inprogress = document.querySelector(".Inprogress");
+let Stuck = document.querySelector(".Stuck");
+let Done = document.querySelector(".Done");
