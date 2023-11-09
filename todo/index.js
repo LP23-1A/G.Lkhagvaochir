@@ -51,7 +51,7 @@ const input = document.querySelector("input");
 const textarea = document.querySelector("textarea");
 const select = document.querySelectorAll("select");
 
-function addCard() {
+function addCard(isEdit, id) {
   cards.innerHTML = "";
   modal.style.display = "none";
   const uid = "id-" + Math.random();
@@ -84,7 +84,18 @@ function addCard() {
   Done.innerHTML = count.done;
   input.value = "";
   textarea.value = "";
-  data.push(mockData);
+  if (isEdit) {
+    console.log("test");
+    data = data.map((el) => {
+      if (el.id === id) {
+        mockData.id = id;
+        return mockData;
+      }
+      return el;
+    });
+  } else {
+    data.push(mockData);
+  }
   render(data);
 }
 function addTask(card) {
@@ -140,6 +151,8 @@ function editF(id) {
   const findEl = data.find((el) => el.id == id);
   input.value = findEl.title;
   textarea.value = findEl.desc;
+  addBtn.onclick = () => addCard(true, id);
+
   isModalOpen();
 }
 closeModal();
