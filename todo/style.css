@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("https://c1.wallpaperflare.com/path/565/385/156/sunset-brook-green-meadow-june-df867360f0bed19da26bbb3838498c8f.jpg");
+  background-image: url("./imgs/galaxy.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 textarea {
   width: 100%;
@@ -62,7 +62,7 @@ h1 {
 }
 .board {
   flex: 1;
-  background-color: #ebecf0;
+  background-color: #324ebe;
   gap: 8px;
   border-radius: 8px;
   padding: 8px;
@@ -118,6 +118,7 @@ h1 {
   padding: 8px;
   gap: 16px;
   border: none;
+  border-radius: 8px;
   background: #ebecf0;
 }
 
@@ -133,6 +134,10 @@ h1 {
   left: 0;
 }
 
+.tit {
+  color: rgb(165, 154, 154);
+}
+
 .modal {
   width: 100vw;
   height: 100vh;
@@ -146,7 +151,7 @@ h1 {
   z-index: 1;
 }
 .addTask {
-  background-color: #fff;
+  background-color: #2f295c;
   flex-direction: column;
   width: 400px;
   gap: 16px;
@@ -167,7 +172,7 @@ h1 {
 .addBtn {
   width: 100%;
   height: 30px;
-  background: #000;
+  background: #324ebe;
   color: #fff;
   border: solid 0px;
   border-radius: 5px;

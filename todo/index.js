@@ -4,8 +4,8 @@ let overlay = document.querySelector(".overlay");
 let addBtn = document.querySelector(".addBtn");
 let cards = document.querySelector(".cards");
 
-let titleInput = document.querySelector("#title");
-let textarea = document.querySelector("#textarea");
+// let titleInput = document.querySelector("#title");
+// let textarea = document.querySelector("#textarea");
 
 for (let i = 0; i < one.length; i++) {
   one[i].onclick = function () {
@@ -46,6 +46,11 @@ function render(data) {
     }
   }
 }
+
+const input = document.querySelector("input");
+const textarea = document.querySelector("textarea");
+const select = document.querySelectorAll("select");
+
 function addCard() {
   cards.innerHTML = "";
   modal.style.display = "none";
@@ -59,9 +64,7 @@ function addCard() {
     status: "",
     priority: "",
   };
-  const input = document.querySelector("input");
-  const textarea = document.querySelector("textarea");
-  const select = document.querySelectorAll("select");
+
   mockData.title = input.value;
   mockData.desc = textarea.value;
   mockData.status = select[0].value;
@@ -75,11 +78,12 @@ function addCard() {
   } else if (mockData.status === "Done") {
     count.done += 1;
   }
-  console.log(count);
   Todo.innerHTML = count.todo;
   Inprogress.innerHTML = count.inprogress;
   Stuck.innerHTML = count.stuck;
   Done.innerHTML = count.done;
+  input.value = "";
+  textarea.value = "";
   data.push(mockData);
   render(data);
 }
@@ -94,7 +98,7 @@ function addTask(card) {
               </div>
               <div class="actions flex column gap8 crs">
                 <button onclick="removeF(${id})" class="crs boardnone"><img class="remove" src="./icons/x-mark.png" alt="" /></button>
-                <button class="crs boardnone"><img class="edit" src="./icons/edit.png" alt="" /></button>
+                <button onclick="editF('${id}', true)" class="crs boardnone"><img class="edit" src="./icons/edit.png" alt="" /></button>
               </div>
             </div>`;
 }
@@ -126,6 +130,17 @@ function removeF(id) {
   Done.innerHTML = count.done;
 
   render(data);
+}
+function isModalOpen() {
+  if (modal.style.display == "block") modal.style.display = "none";
+  else modal.style.display = "block";
+  modal.style.display = "flex";
+}
+function editF(id) {
+  const findEl = data.find((el) => el.id == id);
+  input.value = findEl.title;
+  textarea.value = findEl.desc;
+  isModalOpen();
 }
 closeModal();
 

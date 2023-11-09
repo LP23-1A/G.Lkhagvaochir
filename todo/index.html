@@ -47,7 +47,7 @@
         <div class="board flex column">
           <div class="boardHeader">Done <span class="op Done">0</span></div>
           <div class="cards flex column"></div>
-          <button class="addBtns flex crs" ()>
+          <button onclick="editF(false)" class="addBtns flex crs" ()>
             <i><img class="img" src="./icons/plus.png" alt="" /></i>
             <div>Add card</div>
           </button>
@@ -60,19 +60,19 @@
     <div class="modal" id="two">
       <div class="overlay"></div>
       <div class="addTask flex">
-        <h1>Add Task</h1>
+        <h1 class="tit">Add Task</h1>
         <div class="flex column">
-          <label name="">Title</label>
+          <label class="tit">Title</label>
           <input id="title" class="text1" type="text" />
         </div>
 
         <div>
-          <label for="">Description</label>
+          <label for="" class="tit">Description</label>
           <textarea name="" id="textarea" cols="30" rows="10"></textarea>
         </div>
 
         <div>
-          <label for="">Status</label>
+          <label for="" class="tit">Status</label>
           <select name="Status" class="text1" id="">
             <option value="To do">To do</option>
             <option value="In progress">In progress</option>
@@ -82,7 +82,7 @@
         </div>
 
         <div>
-          <label for="">priority</label>
+          <label for="" class="tit">priority</label>
           <select class="text1" id="">
             <p>Status</p>
             <option value="low">Low</option>
