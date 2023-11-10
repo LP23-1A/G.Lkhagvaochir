@@ -10,6 +10,7 @@ let cards = document.querySelector(".cards");
 for (let i = 0; i < one.length; i++) {
   one[i].onclick = function () {
     modal.style.display = "flex";
+    addBtn.onclick = () => addCard(false);
   };
 }
 
@@ -55,7 +56,6 @@ function addCard(isEdit, id) {
   cards.innerHTML = "";
   modal.style.display = "none";
   const uid = "id-" + Math.random();
-  // count = count + 1;
 
   const mockData = {
     id: uid,
@@ -69,21 +69,10 @@ function addCard(isEdit, id) {
   mockData.desc = textarea.value;
   mockData.status = select[0].value;
   mockData.priority = select[1].value;
-  if (mockData.status === "To do") {
-    count.todo += 1;
-  } else if (mockData.status === "In progress") {
-    count.inprogress += 1;
-  } else if (mockData.status === "Stuck") {
-    count.stuck += 1;
-  } else if (mockData.status === "Done") {
-    count.done += 1;
-  }
-  Todo.innerHTML = count.todo;
-  Inprogress.innerHTML = count.inprogress;
-  Stuck.innerHTML = count.stuck;
-  Done.innerHTML = count.done;
+
   input.value = "";
   textarea.value = "";
+
   if (isEdit) {
     console.log("test");
     data = data.map((el) => {
@@ -95,6 +84,19 @@ function addCard(isEdit, id) {
     });
   } else {
     data.push(mockData);
+    if (mockData.status === "To do") {
+      count.todo += 1;
+    } else if (mockData.status === "In progress") {
+      count.inprogress += 1;
+    } else if (mockData.status === "Stuck") {
+      count.stuck += 1;
+    } else if (mockData.status === "Done") {
+      count.done += 1;
+    }
+    Todo.innerHTML = count.todo;
+    Inprogress.innerHTML = count.inprogress;
+    Stuck.innerHTML = count.stuck;
+    Done.innerHTML = count.done;
   }
   render(data);
 }
@@ -109,7 +111,7 @@ function addTask(card) {
               </div>
               <div class="actions flex column gap8 crs">
                 <button onclick="removeF(${id})" class="crs boardnone"><img class="remove" src="./icons/x-mark.png" alt="" /></button>
-                <button onclick="editF('${id}', true)" class="crs boardnone"><img class="edit" src="./icons/edit.png" alt="" /></button>
+                <button onclick="editF('${id}')" class="crs boardnone"><img class="edit" src="./icons/edit.png" alt="" /></button>
               </div>
             </div>`;
 }
@@ -148,6 +150,7 @@ function isModalOpen() {
   modal.style.display = "flex";
 }
 function editF(id) {
+  console.log("text");
   const findEl = data.find((el) => el.id == id);
   input.value = findEl.title;
   textarea.value = findEl.desc;
