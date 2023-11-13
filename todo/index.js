@@ -143,6 +143,7 @@ function removeF(id) {
   Done.innerHTML = count.done;
 
   render(data);
+  g;
 }
 function isModalOpen() {
   if (modal.style.display == "block") modal.style.display = "none";
