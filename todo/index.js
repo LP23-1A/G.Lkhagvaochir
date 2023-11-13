@@ -3,6 +3,11 @@ let one = document.getElementsByClassName("addBtns");
 let overlay = document.querySelector(".overlay");
 let addBtn = document.querySelector(".addBtn");
 let cards = document.querySelector(".cards");
+let Todo = document.querySelector(".Todo");
+let Inprogress = document.querySelector(".Inprogress");
+let Stuck = document.querySelector(".Stuck");
+let Done = document.querySelector(".Done");
+let draggedItem = null;
 
 // let titleInput = document.querySelector("#title");
 // let textarea = document.querySelector("#textarea");
@@ -20,14 +25,7 @@ function closeModal() {
 
 // addBtn.onclick = addTask;
 overlay.onclick = closeModal;
-let data = [
-  // {
-  //   title: "asd",
-  //   desc: "asd",
-  //   priority: "asd",
-  //   status: "To do",
-  // },
-];
+let data = [];
 
 function render(data) {
   const cards = document.getElementsByClassName("cards");
@@ -46,13 +44,31 @@ function render(data) {
       cards[3].innerHTML += addTask(data[i]);
     }
   }
+
+  // let stage = {
+  //   todo: 0,
+  //   inprogress: 0,
+  // };
+
+  // data.map((e) => {
+  //   if (e.status == "To do") {
+  //     stage.todo++;
+  //   }
+  //   if (e.status == "In progress") {
+  //     stage.inprogress++;
+  //   }
+  // });
+  // Todo.innerText = stage.todo;
+  // Inprogress.innerText = stage.inprogress;
+
+  dragAndDrop();
 }
 
 const input = document.querySelector("input");
 const textarea = document.querySelector("textarea");
 const select = document.querySelectorAll("select");
 
-function addCard(isEdit, id) {
+function addCard(isEdit, id, change) {
   cards.innerHTML = "";
   modal.style.display = "none";
   const uid = "id-" + Math.random();
@@ -102,7 +118,7 @@ function addCard(isEdit, id) {
 }
 function addTask(card) {
   const { title, desc, priority, id } = card;
-  return `<div id="${id}" class="card flex gap12">
+  return `<div draggable="true" id="${id}" class="card flex gap12">
               <img class="done crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>${title}</h4>
@@ -143,7 +159,6 @@ function removeF(id) {
   Done.innerHTML = count.done;
 
   render(data);
-  g;
 }
 function isModalOpen() {
   if (modal.style.display == "block") modal.style.display = "none";
@@ -168,7 +183,82 @@ let count = {
   stuck: 0,
   done: 0,
 };
-let Todo = document.querySelector(".Todo");
-let Inprogress = document.querySelector(".Inprogress");
-let Stuck = document.querySelector(".Stuck");
-let Done = document.querySelector(".Done");
+function dragAndDrop() {
+  const card = document.querySelectorAll(".card");
+  const boards = document.querySelectorAll(".board");
+  card.forEach((card) => {
+    card.addEventListener("dragstart", (event) => {
+      event.target.value;
+      draggedItem = event.target;
+      event.dataTransfer.setData("text", event.target.getAttribute("data-id"));
+    });
+    card.addEventListener("dragend", () => {
+      draggedItem = null;
+    });
+  });
+  boards.forEach((board) => {
+    board.addEventListener("dragover", (event) => {
+      event.preventDefault();
+    });
+    board.addEventListener("dragenter", (event) => {
+      event.preventDefault();
+      if (draggedItem) {
+        const draggingBoard = draggedItem.parentNode;
+        if (draggingBoard !== event.currentTarget) {
+          event.currentTarget.querySelector(".cards").appendChild(draggedItem);
+        }
+      }
+    });
+    board.addEventListener("dragleave", () => {});
+    board.addEventListener("drop", (event) => {
+      event.preventDefault();
+      const draggedAElementId = board.querySelector(".card").id;
+
+      data.map((el) => {
+        if (el.id === draggedAElementId) {
+          el.status = board.id;
+        }
+      });
+
+      let count = {
+        todo: 0,
+        inprogress: 0,
+        stuck: 0,
+        done: 0,
+      };
+
+      data.map((e) => {
+        if (e.status === "To do") {
+          count.todo += 1;
+        } else if (e.status === "In progress") {
+          count.inprogress += 1;
+        } else if (e.status === "Stuck") {
+          count.stuck += 1;
+        } else if (e.status === "Done") {
+          count.done += 1;
+        }
+      });
+
+      Todo.innerHTML = count.todo;
+      Inprogress.innerHTML = count.inprogress;
+      Stuck.innerHTML = count.stuck;
+      Done.innerHTML = count.done;
+
+      if (element.status === "To do") {
+        count.todo -= 1;
+      } else if (element.status === "In progress") {
+        count.inprogress -= 1;
+      } else if (element.status === "Stuck") {
+        count.stuck -= 1;
+      } else if (element.status === "Done") {
+        count.done -= 1;
+      }
+      Todo.innerHTML = count.todo;
+      Inprogress.innerHTML = count.inprogress;
+      Stuck.innerHTML = count.stuck;
+      Done.innerHTML = count.done;
+    });
+  });
+}
+
+render(data);
