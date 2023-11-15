@@ -7,6 +7,7 @@ let Todo = document.querySelector(".Todo");
 let Inprogress = document.querySelector(".Inprogress");
 let Stuck = document.querySelector(".Stuck");
 let Done = document.querySelector(".Done");
+let checkbtn = document.querySelectorAll(".check");
 let draggedItem = null;
 
 // let titleInput = document.querySelector("#title");
@@ -44,23 +45,6 @@ function render(data) {
       cards[3].innerHTML += addTask(data[i]);
     }
   }
-
-  // let stage = {
-  //   todo: 0,
-  //   inprogress: 0,
-  // };
-
-  // data.map((e) => {
-  //   if (e.status == "To do") {
-  //     stage.todo++;
-  //   }
-  //   if (e.status == "In progress") {
-  //     stage.inprogress++;
-  //   }
-  // });
-  // Todo.innerText = stage.todo;
-  // Inprogress.innerText = stage.inprogress;
-
   dragAndDrop();
 }
 
@@ -68,7 +52,7 @@ const input = document.querySelector("input");
 const textarea = document.querySelector("textarea");
 const select = document.querySelectorAll("select");
 
-function addCard(isEdit, id, change) {
+function addCard(isEdit, id) {
   cards.innerHTML = "";
   modal.style.display = "none";
   const uid = "id-" + Math.random();
@@ -100,26 +84,14 @@ function addCard(isEdit, id, change) {
     });
   } else {
     data.push(mockData);
-    if (mockData.status === "To do") {
-      count.todo += 1;
-    } else if (mockData.status === "In progress") {
-      count.inprogress += 1;
-    } else if (mockData.status === "Stuck") {
-      count.stuck += 1;
-    } else if (mockData.status === "Done") {
-      count.done += 1;
-    }
-    Todo.innerHTML = count.todo;
-    Inprogress.innerHTML = count.inprogress;
-    Stuck.innerHTML = count.stuck;
-    Done.innerHTML = count.done;
+    duudah();
   }
   render(data);
 }
 function addTask(card) {
   const { title, desc, priority, id } = card;
   return `<div draggable="true" id="${id}" class="card flex gap12">
-              <img class="done crs" src="./icons/check-mark.png" alt="" />
+              <img onclick="moveDone(${id})" class="done check crs" src="./icons/check-mark.png" alt="" />
               <div class="details flex1 gap12 flex column">
                 <h4>${title}</h4>
                 <p>${desc}</p>
@@ -131,6 +103,7 @@ function addTask(card) {
               </div>
             </div>`;
 }
+
 function removeF(id) {
   let elementId = "id" + id;
   let element = null;
@@ -176,13 +149,32 @@ function editF(id) {
 }
 closeModal();
 
-// render(data);
-let count = {
-  todo: 0,
-  inprogress: 0,
-  stuck: 0,
-  done: 0,
-};
+function moveDone(id) {
+  let moveId = "id" + id;
+  const moveList = data.map((item) => {
+    if (item.id === moveId) {
+      if (item.status === "To do") {
+        count.todo -= 1;
+      } else if (element.status === "In progress") {
+        count.inprogress -= 1;
+      } else if (element.status === "Stuck") {
+        count.stuck -= 1;
+      } else if (element.status === "Done") {
+        count.done -= 1;
+      }
+      item.status = "Done";
+      if (item.status === "Done") {
+        count.done += 1;
+      }
+      Todo.innerHTML = count.todo;
+      Inprogress.innerHTML = count.inprogress;
+      Stuck.innerHTML = count.stuck;
+      Done.innerHTML = count.done;
+    }
+    return item;
+  });
+  render(moveList);
+}
 function dragAndDrop() {
   const card = document.querySelectorAll(".card");
   const boards = document.querySelectorAll(".board");
@@ -196,7 +188,7 @@ function dragAndDrop() {
       draggedItem = null;
     });
   });
-  boards.forEach((board) => {
+  boards.forEach((board, index) => {
     board.addEventListener("dragover", (event) => {
       event.preventDefault();
     });
@@ -206,6 +198,25 @@ function dragAndDrop() {
         const draggingBoard = draggedItem.parentNode;
         if (draggingBoard !== event.currentTarget) {
           event.currentTarget.querySelector(".cards").appendChild(draggedItem);
+          let id = draggedItem.getAttribute("id");
+          console.log(data);
+          console.log(draggedItem.getAttribute("id"));
+
+          data.map((el) => {
+            if (el.id === id) {
+              if (index === 0) {
+                el.status = "To do";
+              } else if (index === 1) {
+                el.status = "In progress";
+              } else if (index === 2) {
+                el.status = "Stuck";
+              } else if (index === 3) {
+                el.status = "Done";
+              }
+            }
+            duudah();
+            console.log(index);
+          });
         }
       }
     });
@@ -219,46 +230,33 @@ function dragAndDrop() {
           el.status = board.id;
         }
       });
-
-      let count = {
-        todo: 0,
-        inprogress: 0,
-        stuck: 0,
-        done: 0,
-      };
-
-      data.map((e) => {
-        if (e.status === "To do") {
-          count.todo += 1;
-        } else if (e.status === "In progress") {
-          count.inprogress += 1;
-        } else if (e.status === "Stuck") {
-          count.stuck += 1;
-        } else if (e.status === "Done") {
-          count.done += 1;
-        }
-      });
-
-      Todo.innerHTML = count.todo;
-      Inprogress.innerHTML = count.inprogress;
-      Stuck.innerHTML = count.stuck;
-      Done.innerHTML = count.done;
-
-      if (element.status === "To do") {
-        count.todo -= 1;
-      } else if (element.status === "In progress") {
-        count.inprogress -= 1;
-      } else if (element.status === "Stuck") {
-        count.stuck -= 1;
-      } else if (element.status === "Done") {
-        count.done -= 1;
-      }
-      Todo.innerHTML = count.todo;
-      Inprogress.innerHTML = count.inprogress;
-      Stuck.innerHTML = count.stuck;
-      Done.innerHTML = count.done;
     });
   });
 }
+function duudah() {
+  let count = {
+    todo: 0,
+    inprogress: 0,
+    stuck: 0,
+    done: 0,
+  };
 
+  data.map((e) => {
+    if (e.status === "To do") {
+      count.todo += 1;
+    } else if (e.status === "In progress") {
+      count.inprogress += 1;
+    } else if (e.status === "Stuck") {
+      count.stuck += 1;
+    } else if (e.status === "Done") {
+      count.done += 1;
+    }
+  });
+
+  Todo.innerHTML = count.todo;
+  Inprogress.innerHTML = count.inprogress;
+  Stuck.innerHTML = count.stuck;
+  Done.innerHTML = count.done;
+}
+duudah();
 render(data);

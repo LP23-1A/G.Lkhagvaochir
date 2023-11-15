@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="icons/todo.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To do</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,18 +61,18 @@
     <div class="modal" id="two">
       <div class="overlay"></div>
       <div class="addTask flex">
-        <h1 class="tit">Add Task</h1>
+        <h1 class="zindex tit">Add Task</h1>
         <div class="flex column">
-          <label class="tit">Title</label>
-          <input id="title" class="text1" type="text" />
+          <label class="zindex tit">Title</label>
+          <input id="title" class="zindex text1" type="text" />
         </div>
 
-        <div>
+        <div class="zindex">
           <label for="" class="tit">Description</label>
           <textarea name="" id="textarea" cols="30" rows="10"></textarea>
         </div>
 
-        <div>
+        <div class="zindex">
           <label for="" class="tit">Status</label>
           <select name="Status" class="text1" id="">
             <option value="To do">To do</option>
@@ -81,7 +82,7 @@
           </select>
         </div>
 
-        <div>
+        <div class="zindex">
           <label for="" class="tit">priority</label>
           <select class="text1" id="">
             <p>Status</p>
@@ -91,7 +92,7 @@
           </select>
         </div>
 
-        <button class="addBtn crs" onclick="addCard()">Add Task</button>
+        <button class="zindex addBtn crs" onclick="addCard()">Add Task</button>
       </div>
     </div>
     <script src="./index.js"></script>
