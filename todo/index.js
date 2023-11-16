@@ -10,6 +10,13 @@ let Done = document.querySelector(".Done");
 let checkbtn = document.querySelectorAll(".check");
 let draggedItem = null;
 
+let count = {
+  todo: 0,
+  inprogress: 0,
+  stuck: 0,
+  done: 0,
+};
+
 // let titleInput = document.querySelector("#title");
 // let textarea = document.querySelector("#textarea");
 
@@ -78,6 +85,7 @@ function addCard(isEdit, id) {
     data = data.map((el) => {
       if (el.id === id) {
         mockData.id = id;
+        console.log(select[0].value);
         return mockData;
       }
       return el;
@@ -155,11 +163,11 @@ function moveDone(id) {
     if (item.id === moveId) {
       if (item.status === "To do") {
         count.todo -= 1;
-      } else if (element.status === "In progress") {
+      } else if (item.status === "In progress") {
         count.inprogress -= 1;
-      } else if (element.status === "Stuck") {
+      } else if (item.status === "Stuck") {
         count.stuck -= 1;
-      } else if (element.status === "Done") {
+      } else if (item.status === "Done") {
         count.done -= 1;
       }
       item.status = "Done";
@@ -171,8 +179,10 @@ function moveDone(id) {
       Stuck.innerHTML = count.stuck;
       Done.innerHTML = count.done;
     }
+
     return item;
   });
+
   render(moveList);
 }
 function dragAndDrop() {
@@ -182,7 +192,7 @@ function dragAndDrop() {
     card.addEventListener("dragstart", (event) => {
       event.target.value;
       draggedItem = event.target;
-      event.dataTransfer.setData("text", event.target.getAttribute("data-id"));
+      event.dataTransfer.setData("text", event.target.getAttribute("id"));
     });
     card.addEventListener("dragend", () => {
       draggedItem = null;
@@ -240,7 +250,6 @@ function duudah() {
     stuck: 0,
     done: 0,
   };
-
   data.map((e) => {
     if (e.status === "To do") {
       count.todo += 1;
