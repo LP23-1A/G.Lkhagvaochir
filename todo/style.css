@@ -155,13 +155,17 @@ h1 {
 .img {
   width: 12px;
   height: 12px;
+  color: white;
+}
+.addCard {
+  color: white;
 }
 .addBtns {
   padding: 8px;
   gap: 16px;
   border: none;
   border-radius: 8px;
-  background: #ebecf0;
+  background: #3586c0;
   z-index: 1;
 }
 
@@ -239,7 +243,7 @@ h1 {
   border-radius: 5px;
 }
 .addBtns:hover {
-  background: #bdb5b5;
+  background: #af60c5;
   border-radius: 10px;
 }
 .done:hover {
