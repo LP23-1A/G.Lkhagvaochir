@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .flex {
   display: flex;
 }
@@ -157,6 +153,11 @@ header {
   height: 560px;
   padding: 96px 80px;
 }
+.lilIconsS {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .lilIcons {
   width: 64px;
   height: 64px;
@@ -166,6 +167,12 @@ header {
   flex-direction: column;
   gap: 48px;
   margin: auto;
+}
+
+.iconsS-S {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
 .containerSS {
   background: var(--gray-50, #f9fafb);
