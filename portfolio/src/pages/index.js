@@ -23,6 +23,15 @@ import Cypress from "../components/icon/iconcypress.png";
 import Storybook from "../components/icon/iconstorybook.png";
 import Git from "../components/icon/icongit.png";
 import Next from "../components/icon/iconnextjs.png";
+import BoxIMG from "@/components/Box";
+import Tags from "@/components/Tags";
+import IconB from "@/components/IconsB";
+import BoxC from "@/components/BoxI";
+import BoxW from "@/components/BoxW";
+import MSG from "@/components/messegIcon";
+import Copy from "@/components/CopyIcon";
+import Phone from "@/components/Phoneicon";
+import C from "@/components/Cicon";
 
 const skills = [
   {
@@ -97,11 +106,11 @@ export default function Home() {
     <div className="Container">
       <Navbar />
       <section>
-        <div className="heroContainer flex gap48">
+        <div className="heroContainer flex gap-12">
           <div className="heroContainerText heroText gap48">
             <div>
               <h1>Hi, I’m Sagar 👋</h1>
-              <p className="size16 fontW defColor">
+              <p className="size16 fontW defColor text16">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -139,7 +148,7 @@ export default function Home() {
                 <SagarRed />
               </div>
             </div>
-            <div className="mText gap16 flex column">
+            <div className="mText gap16 flex column text16">
               <h1 className="textF">Curious about me? Here you have it:</h1>
               <p className="textS defColor">
                 I'm a passionate, self-proclaimed designer who specializes in
@@ -209,9 +218,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="containerSS">
-          <div className="flex column gap16">
+      <section className="gap48 containerSS containerBox">
+        <div className="flex gap48 column">
+          <div className="gap16 flex column">
             <div className="justifyC aligItemC flex">
               <Topic text="Experience" />
             </div>
@@ -219,35 +228,161 @@ export default function Home() {
               <TopicD text="Here is a quick summary of my most recent experiences:" />
             </div>
           </div>
-          <div className="box">
-            <div className="flex gap48">
-              <div>
-                <Upworks />
-              </div>
-              <div className="textC gap16 flex column">
-                <div className="textCC column">
-                  <div>
-                    <h1>Sr. Frontend Developer</h1>
-                  </div>
-                  <div className="defColor">
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-                    <li>
-                      Ut pretium arcu et massa semper, id fringilla leo semper.
-                    </li>
-                    <li>Sed quis justo ac magna.</li>
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
+          <div className="containerSS">
+            <div className="flex column gap16"></div>
+            <div className="box">
+              <div className="flex gap48">
+                <div>
+                  <Upworks />
+                </div>
+                <div className="textC gap16 flex column">
+                  <div className="textCC column">
+                    <div>
+                      <h1>Sr. Frontend Developer</h1>
+                    </div>
+                    <div className="defColor text16">
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                      <li>
+                        Ut pretium arcu et massa semper, id fringilla leo
+                        semper.
+                      </li>
+                      <li>Sed quis justo ac magna.</li>
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                    </div>
                   </div>
                 </div>
+                <div>Nov 2021 - Present</div>
               </div>
-              <div>Nov 2021 - Present</div>
+            </div>
+          </div>
+          <div className="containerSS">
+            <div className="flex column gap16"></div>
+            <div className="box">
+              <div className="flex gap48">
+                <div>
+                  <Upworks />
+                </div>
+                <div className="textC gap16 flex column">
+                  <div className="textCC column">
+                    <div>
+                      <h1>Sr. Frontend Developer</h1>
+                    </div>
+                    <div className="defColor text16">
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                      <li>
+                        Ut pretium arcu et massa semper, id fringilla leo
+                        semper.
+                      </li>
+                      <li>Sed quis justo ac magna.</li>
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div>Nov 2021 - Present</div>
+              </div>
+            </div>
+          </div>
+          <div className="containerSS">
+            <div className="flex column gap16"></div>
+            <div className="box">
+              <div className="flex gap48">
+                <div>
+                  <Upworks />
+                </div>
+                <div className="textC gap16 flex column">
+                  <div className="textCC column">
+                    <div>
+                      <h1>Sr. Frontend Developer</h1>
+                    </div>
+                    <div className="defColor text16">
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                      <li>
+                        Ut pretium arcu et massa semper, id fringilla leo
+                        semper.
+                      </li>
+                      <li>Sed quis justo ac magna.</li>
+                      <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div>Nov 2021 - Present</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <section className="padding gap48 flex column">
+        <div className="gap16 flex column">
+          <div className="justifyC aligItemC flex">
+            <Topic text="Work" />
+          </div>
+
+          <div>
+            <TopicD text="Some of the noteworthy projects I have built:" />
+          </div>
+        </div>
+        <BoxC />
+        <BoxW />
+        <BoxC />
+      </section>
+      <section className="padding">
+        <div className="contactMe flex column justifyC alignItemC gap48">
+          <div className="flex column gap16">
+            <div className="justifyC aligItemC flex">
+              <Topic text="Get in touch" />
+            </div>
+            <div className="heree flex justifyC aligItemC">
+              <TopicD
+                text={`What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.`}
+              />
+            </div>
+          </div>
+          <div className="flex column justifyC aligItemC gap16">
+            <div className="flex">
+              <MSG />
+              <h1>reachsagarshah@gmail.com</h1>
+              <Copy />
+            </div>
+            <div className="flex">
+              <Phone />
+              <h1>+91 8980500565</h1>
+              <Copy />
+            </div>
+          </div>
+          <div className="gap8 flex column">
+            <div>
+              <TopicD text="You may also find me on these platforms!" />
+            </div>
+            <div className="flex justifyC aligItemC">
+              <SocialI />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div>
+          <div className="flex aligItemC justifyC gap8 textAlignC">
+            <div>
+              <C />
+            </div>
+            <div>
+              <TopicD text="2023 | Designed and coded with ❤️️ by Sagar Shah" />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -1,4 +1,7 @@
-.flex {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* .flex {
   display: flex;
 }
 .gap84 {
@@ -10,9 +13,13 @@
 .gap24 {
   gap: 24px;
 }
+.padding {
+  padding: 96px 80px;
+}
 .size16 {
   font-size: 16px;
 }
+
 .fontW {
   font-weight: 400;
 }
@@ -33,6 +40,9 @@
 }
 .aligItemC {
   align-items: center;
+}
+.textAlignC {
+  text-align: center;
 }
 .defColor {
   color: #4b5563;
@@ -174,6 +184,9 @@ header {
   flex-wrap: wrap;
   text-align: center;
 }
+.containerBox {
+  padding: 96px 80px;
+}
 .containerSS {
   background: var(--gray-50, #f9fafb);
 }
@@ -198,3 +211,61 @@ header {
   gap: 48px;
   align-self: stretch;
 }
+.workBoxC {
+  margin: auto;
+  width: 1152px;
+  border-radius: 12px;
+  background: var(--gray-default, #fff);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
+    0px 4px 3px 0px rgba(0, 0, 0, 0.07);
+}
+.workBox {
+  width: 576px;
+  height: 480px;
+  padding: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0px 0px 12px;
+  border-right: 1px solid var(--gray-100, #f3f4f6);
+  background: var(--gray-50, #f9fafb);
+}
+.tags {
+  flex-wrap: wrap;
+}
+.boxWhite {
+  width: 576px;
+  height: 480px;
+  padding: 48px;
+  border-radius: 12px 0px 0px 12px;
+}
+.button {
+  background-color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.text16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contactMe {
+  padding: 0px 32px;
+  gap: 48px;
+}
+.heree {
+  width: 576px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+}
+footer {
+  padding: 24px 80px;
+  background: var(--gray-50, #f9fafb);
+} */

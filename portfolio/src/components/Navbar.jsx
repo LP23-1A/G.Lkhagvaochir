@@ -2,10 +2,10 @@ import ThemeIcon from "./icon/Themicon";
 
 export default function Navbar() {
   return (
-    <header className="flex justifyS aligItemc">
+    <header className="flex justify-center items-center justify-between">
       <div>Logo</div>
-      <div className="headerConText flex gap24">
-        <ul className="headerListContainer flex gap24 ">
+      <div className="headerConText flex gap-6">
+        <ul className="headerListContainer flex gap-6 ">
           {["Home", "About", "Testimonials", "Contact"].map((navItem) => {
             return (
               <li className="listStyle">
@@ -20,7 +20,7 @@ export default function Navbar() {
           <button className="Ticon">
             <ThemeIcon />
           </button>
-          <button className="download borderR12">Download CV</button>
+          <button className="download rounded-xl">Download CV</button>
         </div>
       </div>
     </header>
