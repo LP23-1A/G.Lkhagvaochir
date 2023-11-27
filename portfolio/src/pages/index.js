@@ -103,14 +103,14 @@ const skills = [
 
 export default function Home() {
   return (
-    <div className="Container">
-      <Navbar />
+    <div>
+      <Navbar className="m-auto w-[1440px]" />
       <section>
-        <div className="heroContainer flex gap-12">
-          <div className="heroContainerText heroText gap48">
-            <div>
-              <h1>Hi, I’m Sagar 👋</h1>
-              <p className="size16 fontW defColor text16">
+        <div className="heroContainer flex gap-12 px-20 py-24 m-auto w-[1440px]">
+          <div className="flex-col gap-12 flex">
+            <div className="gap-2 flex flex-col">
+              <h1 className="font-bold text-6xl">Hi, I’m Sagar 👋</h1>
+              <p className="text-base text-[#4b5563] w-[768px] font-normal">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -118,8 +118,8 @@ export default function Home() {
                 for over 7 years, I still love it as if it was something new.
               </p>
             </div>
-            <div className="heroSec gap8 ">
-              <div className="flex heroGreen gap8">
+            <div className="flex gap-2 flex-col ">
+              <div className="flex gap-2">
                 <LocationIcon />
                 <p>Ahmedabad, India</p>
               </div>
@@ -132,25 +132,27 @@ export default function Home() {
               <SocialI />
             </div>
           </div>
-          <div className="sagarI flex">
+          <div className="m-auto w-[280px] h-[320px] shrink-0 flex">
             <SagarIMG />
           </div>
         </div>
       </section>
       <section>
-        <div className="flex column gap48 mContainer">
-          <div className="justifyC aligItemC flex">
+        <div className="flex flex-col gap-12 bg-[#F9FAFB] px-20 py-24 m-auto w-[1440px]">
+          <div className="justify-center items-center flex">
             <Topic text="About me" />
           </div>
           <div className="mContainerS flex justifyC aligItemC gap48">
             <div>
-              <div className="redShadow">
+              <div className="w-[400px] h-[480px]">
                 <SagarRed />
               </div>
             </div>
-            <div className="mText gap16 flex column text16">
-              <h1 className="textF">Curious about me? Here you have it:</h1>
-              <p className="textS defColor">
+            <div className="w-[492px] h-[694px] m-auto gap-4 flex flex-col text-base font-normal not-italic">
+              <h1 className="font-semibold text-3xl">
+                Curious about me? Here you have it:
+              </h1>
+              <p className="text-base font-normal text-[#4b5563]">
                 I'm a passionate, self-proclaimed designer who specializes in
                 full stack development (React.js & Node.js). I am very
                 enthusiastic about bringing the technical and visual aspects of
@@ -158,7 +160,7 @@ export default function Home() {
                 and writing clear, readable, highly performant code matters to
                 me.
               </p>
-              <p className="textS defColor">
+              <p className="text-base font-normal text-[#4b5563]">
                 I began my journey as a web developer in 2015, and since then,
                 I've continued to grow and evolve as a developer, taking on new
                 challenges and learning the latest technologies along the way.
@@ -167,31 +169,31 @@ export default function Home() {
                 using modern technologies such as Next.js, TypeScript, Nestjs,
                 Tailwindcss, Supabase and much more.
               </p>
-              <p className="textS defColor">
+              <p className="text-base font-normal text-[#4b5563]">
                 I am very much a progressive thinker and enjoy working on
                 products end to end, from ideation all the way to development.
               </p>
-              <p className="textS defColor">
+              <p className="text-base font-normal text-[#4b5563]">
                 When I'm not in full-on developer mode, you can find me hovering
                 around on twitter or on indie hacker, witnessing the journey of
                 early startups or enjoying some free time. You can follow me on
                 Twitter where I share tech-related bites and build in public, or
                 you can follow me on GitHub.
               </p>
-              <p className="textS defColor">
+              <p className="text-base font-normal text-[#4b5563]">
                 Finally, some quick bits about me.
               </p>
-              <div className="last flex gap48">
-                <div className=" textS defColor ">
+              <div className="flex gap-12">
+                <div className=" text-base font-normal text-[#4b5563] ">
                   <li>B.E. in Computer Engineering</li>
                   <li>Full time freelancer</li>
                 </div>
-                <div className="textS defColor ">
+                <div className="text-base font-normal text-[#4b5563] ">
                   <li>Avid learner</li>
                   <li>Aspiring indie hacker</li>
                 </div>
               </div>
-              <p className="textS defColor">
+              <p className="text-base font-normal text-[#4b5563]">
                 One last thing, I'm available for freelance work, so feel free
                 to reach out and say hello! I promise I don't bite 😉
               </p>
@@ -200,47 +202,44 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="tContainer gap48">
-          <div className="flex column gap48">
-            <div className="flex column gap16">
-              <div className="justifyC aligItemC flex">
+        <div className="px-20 py-24 gap-12 m-auto w-[1440px]">
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-4">
+              <div className="justify-center items-center flex">
                 <Topic text="Skills" />
               </div>
               <div>
                 <TopicD text="The skills, tools and technologies I am really good at:" />
               </div>
             </div>
-            <div className="iconsS">
-              <div className="iconsS-S">
-                <IconsS skills={skills} />
-              </div>
+            <div className="m-auto  gap-12  text-center">
+              <IconsS skills={skills} />
             </div>
           </div>
         </div>
       </section>
-      <section className="gap48 containerSS containerBox">
-        <div className="flex gap48 column">
-          <div className="gap16 flex column">
-            <div className="justifyC aligItemC flex">
+      <section className=" bg-[#f9fafb] flex px-20 py-24 m-auto w-[1440px]">
+        <div className="flex gap-12 flex-col m-auto">
+          <div className="gap-4 flex flex-col ">
+            <div className="justify-center items-center flex">
               <Topic text="Experience" />
             </div>
             <div>
               <TopicD text="Here is a quick summary of my most recent experiences:" />
             </div>
           </div>
-          <div className="containerSS">
-            <div className="flex column gap16"></div>
-            <div className="box">
-              <div className="flex gap48">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+            <div className="m-auto">
+              <div className="flex gap-12 ">
                 <div>
                   <Upworks />
                 </div>
-                <div className="textC gap16 flex column">
-                  <div className="textCC column">
-                    <div>
+                <div className="w-[384px] gap-4 flex flex-col">
+                  <div className="flex flex-col gap-4">
+                    <div className="font-semibold text-xl">
                       <h1>Sr. Frontend Developer</h1>
                     </div>
-                    <div className="defColor text16">
+                    <div className="text-[#4b5563] font-normal text-base">
                       <li>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </li>
@@ -259,19 +258,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="containerSS">
-            <div className="flex column gap16"></div>
-            <div className="box">
-              <div className="flex gap48">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+            <div className="m-auto">
+              <div className="flex gap-12">
                 <div>
                   <Upworks />
                 </div>
-                <div className="textC gap16 flex column">
-                  <div className="textCC column">
-                    <div>
+                <div className="w-[384px] gap-4 flex flex-col">
+                  <div className="flex flex-col gap-4">
+                    <div className="font-semibold text-xl">
                       <h1>Sr. Frontend Developer</h1>
                     </div>
-                    <div className="defColor text16">
+                    <div className="text-[#4b5563] font-normal text-base">
                       <li>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </li>
@@ -290,19 +288,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="containerSS">
-            <div className="flex column gap16"></div>
-            <div className="box">
-              <div className="flex gap48">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+            <div className="m-auto">
+              <div className="flex gap-12">
                 <div>
                   <Upworks />
                 </div>
-                <div className="textC gap16 flex column">
-                  <div className="textCC column">
-                    <div>
+                <div className="w-[384px] gap-4 flex flex-col">
+                  <div className="flex flex-col gap-4">
+                    <div className="font-semibold text-xl">
                       <h1>Sr. Frontend Developer</h1>
                     </div>
-                    <div className="defColor text16">
+                    <div className="text-[#4b5563] font-normal text-base">
                       <li>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </li>
@@ -323,12 +320,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="padding gap48 flex column">
-        <div className="gap16 flex column">
-          <div className="justifyC aligItemC flex">
+      <section className="gap-12 flex flex-col px-20 py-24 m-auto w-[1440px]">
+        <div className="gap-4 flex flex-col">
+          <div className="justify-center items-center flex">
             <Topic text="Work" />
           </div>
-
           <div>
             <TopicD text="Some of the noteworthy projects I have built:" />
           </div>
@@ -337,19 +333,19 @@ export default function Home() {
         <BoxW />
         <BoxC />
       </section>
-      <section className="padding">
-        <div className="contactMe flex column justifyC alignItemC gap48">
-          <div className="flex column gap16">
-            <div className="justifyC aligItemC flex">
+      <section className="px-20 py-24">
+        <div className="px-8 flex flex-col justify-center items-center gap-12 m-auto w-[1440px]">
+          <div className="flex flex-col gap-4">
+            <div className="justify-center items-center flex">
               <Topic text="Get in touch" />
             </div>
-            <div className="heree flex justifyC aligItemC">
+            <div className="w-[576px] font-normal m-auto text-center text-xl flex justify-center items-center">
               <TopicD
                 text={`What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.`}
               />
             </div>
           </div>
-          <div className="flex column justifyC aligItemC gap16">
+          <div className="flex flex-col font-semibold text-4xl justify-center items-center gap-4">
             <div className="flex">
               <MSG />
               <h1>reachsagarshah@gmail.com</h1>
@@ -361,19 +357,19 @@ export default function Home() {
               <Copy />
             </div>
           </div>
-          <div className="gap8 flex column">
+          <div className="gap-2 flex flex-col">
             <div>
               <TopicD text="You may also find me on these platforms!" />
             </div>
-            <div className="flex justifyC aligItemC">
+            <div className="flex justify-center items-center">
               <SocialI />
             </div>
           </div>
         </div>
       </section>
-      <footer>
-        <div>
-          <div className="flex aligItemC justifyC gap8 textAlignC">
+      <footer className="px-6 py-24 bg-[#F9FAFB] w-full">
+        <div className="m-auto w-[1440px] h-[68px]">
+          <div className="flex items-center justify-center gap-2 text-center">
             <div>
               <C />
             </div>

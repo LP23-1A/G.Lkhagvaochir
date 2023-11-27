@@ -2,7 +2,7 @@ import ThemeIcon from "./icon/Themicon";
 
 export default function Navbar() {
   return (
-    <header className="flex justify-center items-center justify-between">
+    <header className=" py-4 px-20 text-center flex justify-center items-center justify-between">
       <div>Logo</div>
       <div className="headerConText flex gap-6">
         <ul className="headerListContainer flex gap-6 ">
@@ -20,7 +20,9 @@ export default function Navbar() {
           <button className="Ticon">
             <ThemeIcon />
           </button>
-          <button className="download rounded-xl">Download CV</button>
+          <button className="download rounded-xl bg-black text-white py-1.5 px-4">
+            Download CV
+          </button>
         </div>
       </div>
     </header>

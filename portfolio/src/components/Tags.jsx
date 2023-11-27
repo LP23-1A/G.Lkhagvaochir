@@ -2,7 +2,7 @@ import Topic from "./Topic";
 
 export default function Tags() {
   return (
-    <div className="flex tags gap8">
+    <div className="flex flex-wrap gap-2">
       <Topic text="Rect" />
       <Topic text="Next.js" />
       <Topic text="Typescript" />

@@ -1,6 +1,6 @@
 export default function SocialI() {
   return (
-    <div className="flex  gap4">
+    <div className="flex  gap-4">
       <div className="socialStyle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
