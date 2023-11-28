@@ -6,7 +6,7 @@ export default function BoxW() {
   return (
     <section>
       <div className=" gap-12 flex flex-col">
-        <div className="m-auto rounded-xl bg-[#fff] shadow-sm flex">
+        <div className="m-auto rounded-xl bg-[#fff] shadow-sm md:flex">
           <div className="w-[576px] h-[480] p-12 gap-6 flex flex-col">
             <h1>Fiskil</h1>
             <p className="w-[480px] font-base font-normal text-[#4b5563] justify-center items-center">

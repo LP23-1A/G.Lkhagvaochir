@@ -104,13 +104,13 @@ const skills = [
 export default function Home() {
   return (
     <div>
-      <Navbar className="m-auto w-[1440px]" />
-      <section>
-        <div className="heroContainer flex gap-12 px-20 py-24 m-auto w-[1440px]">
-          <div className="flex-col gap-12 flex">
-            <div className="gap-2 flex flex-col">
+      <Navbar />
+      <section className="Hero">
+        <div className="heroContainer max-sm:flex-col-reverse max-sm:px-4 max-sm:py-16 flex gap-12 px-20 py-24 m-auto max-w-[1440px]">
+          <div className="flex-col gap-12 flex max-sm:flex">
+            <div className="gap-2 flex flex-col max-w-[1440px]">
               <h1 className="font-bold text-6xl">Hi, I’m Sagar 👋</h1>
-              <p className="text-base text-[#4b5563] w-[768px] font-normal">
+              <p className="text-base text-[#4b5563] max-w-[768px] font-normal">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -123,8 +123,8 @@ export default function Home() {
                 <LocationIcon />
                 <p>Ahmedabad, India</p>
               </div>
-              <div className="flex heroGreen gap8">
-                <span className="Greentseg"></span>
+              <div className="flex heroGreen gap8 items-center gap-2">
+                <span className="rounded-3xl bg-green-500 w-[10px] h-[10px] "></span>
                 <p>Available for new projects</p>
               </div>
             </div>
@@ -137,18 +137,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="flex flex-col gap-12 bg-[#F9FAFB] px-20 py-24 m-auto w-[1440px]">
-          <div className="justify-center items-center flex">
+      <section className="AboutMe">
+        <div className="flex flex-col gap-12 bg-[#F9FAFB] sm:px-4 sm:py-16 px-20 py-24 m-auto max-w-[1440px]">
+          <div className="justify-center items-center flex ">
             <Topic text="About me" />
           </div>
-          <div className="mContainerS flex justifyC aligItemC gap48">
+          <div className=" flex-col mContainerS flex justifyC aligItemC gap48">
             <div>
               <div className="w-[400px] h-[480px]">
                 <SagarRed />
               </div>
             </div>
-            <div className="w-[492px] h-[694px] m-auto gap-4 flex flex-col text-base font-normal not-italic">
+            <div className="max-w-[492px] m-auto gap-4 flex flex-col text-base font-normal not-italic">
               <h1 className="font-semibold text-3xl">
                 Curious about me? Here you have it:
               </h1>
@@ -201,8 +201,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="px-20 py-24 gap-12 m-auto w-[1440px]">
+      <section className="Skills">
+        <div className="px-20 py-24 gap-12 max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px]">
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-4">
               <div className="justify-center items-center flex">
@@ -218,8 +218,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" bg-[#f9fafb] flex px-20 py-24 m-auto w-[1440px]">
-        <div className="flex gap-12 flex-col m-auto">
+      <section className="Experience bg-[#f9fafb] w-full flex m-auto">
+        <div className="w-full md:w-fit p-4 flex gap-12 flex-col m-auto">
           <div className="gap-4 flex flex-col ">
             <div className="justify-center items-center flex">
               <Topic text="Experience" />
@@ -228,13 +228,13 @@ export default function Home() {
               <TopicD text="Here is a quick summary of my most recent experiences:" />
             </div>
           </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+          <div className="w-full rounded-xl bg-[#fff] shadow-sm p-8">
             <div className="m-auto">
               <div className="flex gap-12 ">
                 <div>
                   <Upworks />
                 </div>
-                <div className="w-[384px] gap-4 flex flex-col">
+                <div className="flex flex-col">
                   <div className="flex flex-col gap-4">
                     <div className="font-semibold text-xl">
                       <h1>Sr. Frontend Developer</h1>
@@ -320,7 +320,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="gap-12 flex flex-col px-20 py-24 m-auto w-[1440px]">
+      <section className="Work gap-12 flex flex-col px-20 py-24 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">
         <div className="gap-4 flex flex-col">
           <div className="justify-center items-center flex">
             <Topic text="Work" />
@@ -333,8 +333,8 @@ export default function Home() {
         <BoxW />
         <BoxC />
       </section>
-      <section className="px-20 py-24">
-        <div className="px-8 flex flex-col justify-center items-center gap-12 m-auto w-[1440px]">
+      <section className="GetInTouch max-sm:px-4 max-sm:py-16 px-20 py-24">
+        <div className="px-8 flex flex-col justify-center items-center gap-12 m-auto max-w-[1440px]">
           <div className="flex flex-col gap-4">
             <div className="justify-center items-center flex">
               <Topic text="Get in touch" />
@@ -368,7 +368,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="px-6 py-24 bg-[#F9FAFB] w-full">
-        <div className="m-auto w-[1440px] h-[68px]">
+        <div className="m-auto max-w-[1440px] h-[68px]">
           <div className="flex items-center justify-center gap-2 text-center">
             <div>
               <C />

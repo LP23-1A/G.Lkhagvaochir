@@ -8,7 +8,7 @@ export default function BoxC() {
   return (
     <section>
       <div className=" gap-12 flex flex-col">
-        <div className="m-auto  rounded-xl shadow-sm flex">
+        <div className="m-auto  rounded-xl shadow-sm md:flex">
           <div className="min-w-[480px] p-12 justify-center items-center bg-[#F9FAFB]">
             <BoxIMG />
           </div>
