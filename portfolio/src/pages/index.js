@@ -110,7 +110,7 @@ export default function Home() {
           <div className="flex-col gap-12 flex max-sm:flex">
             <div className="gap-2 flex flex-col max-w-[1440px]">
               <h1 className="font-bold text-6xl">Hi, I’m Sagar 👋</h1>
-              <p className="text-base text-[#4b5563] max-w-[768px] font-normal">
+              <p className="text-base text-[#4b5563] max-w-[768px] font-normal dark:text-[#D1D5DB]">
                 I'm a full stack developer (React.js & Node.js) with a focus on
                 creating (and occasionally designing) exceptional digital
                 experiences that are fast, accessible, visually appealing, and
@@ -118,7 +118,7 @@ export default function Home() {
                 for over 7 years, I still love it as if it was something new.
               </p>
             </div>
-            <div className="flex gap-2 flex-col ">
+            <div className="flex gap-2 flex-col dark:text-[#D1D5DB]">
               <div className="flex gap-2">
                 <LocationIcon />
                 <p>Ahmedabad, India</p>
@@ -132,27 +132,27 @@ export default function Home() {
               <SocialI />
             </div>
           </div>
-          <div className="m-auto w-[280px] h-[320px] shrink-0 flex">
+          <div className="m-auto max-w-[280px]  shrink-0 flex">
             <SagarIMG />
           </div>
         </div>
       </section>
-      <section className="AboutMe">
-        <div className="flex flex-col gap-12 bg-[#F9FAFB] sm:px-4 sm:py-16 px-20 py-24 m-auto max-w-[1440px]">
+      <section className="AboutMe dark:bg-[#111827]">
+        <div className="flex flex-col gap-12 bg-[#F9FAFB] dark:bg-[#111827] max-sm:px-4 max-sm:py-16 px-20 py-24 m-auto max-w-[1440px]">
           <div className="justify-center items-center flex ">
             <Topic text="About me" />
           </div>
-          <div className=" flex-col mContainerS flex justifyC aligItemC gap48">
+          <div className="flex-wrap flex justify-center gap-12">
             <div>
-              <div className="w-[400px] h-[480px]">
+              <div className="max-w-[400px]">
                 <SagarRed />
               </div>
             </div>
-            <div className="max-w-[492px] m-auto gap-4 flex flex-col text-base font-normal not-italic">
+            <div className="max-w-[492px] m-auto gap-4 flex flex-col text-base font-normal not-italic ">
               <h1 className="font-semibold text-3xl">
                 Curious about me? Here you have it:
               </h1>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 I'm a passionate, self-proclaimed designer who specializes in
                 full stack development (React.js & Node.js). I am very
                 enthusiastic about bringing the technical and visual aspects of
@@ -160,7 +160,7 @@ export default function Home() {
                 and writing clear, readable, highly performant code matters to
                 me.
               </p>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 I began my journey as a web developer in 2015, and since then,
                 I've continued to grow and evolve as a developer, taking on new
                 challenges and learning the latest technologies along the way.
@@ -169,31 +169,31 @@ export default function Home() {
                 using modern technologies such as Next.js, TypeScript, Nestjs,
                 Tailwindcss, Supabase and much more.
               </p>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 I am very much a progressive thinker and enjoy working on
                 products end to end, from ideation all the way to development.
               </p>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 When I'm not in full-on developer mode, you can find me hovering
                 around on twitter or on indie hacker, witnessing the journey of
                 early startups or enjoying some free time. You can follow me on
                 Twitter where I share tech-related bites and build in public, or
                 you can follow me on GitHub.
               </p>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 Finally, some quick bits about me.
               </p>
-              <div className="flex gap-12">
-                <div className=" text-base font-normal text-[#4b5563] ">
+              <div className="flex gap-12 ">
+                <div className=" text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                   <li>B.E. in Computer Engineering</li>
                   <li>Full time freelancer</li>
                 </div>
-                <div className="text-base font-normal text-[#4b5563] ">
+                <div className="text-base font-normal text-[#4b5563]dark:text-[#D1D5DB] ">
                   <li>Avid learner</li>
                   <li>Aspiring indie hacker</li>
                 </div>
               </div>
-              <p className="text-base font-normal text-[#4b5563]">
+              <p className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB]">
                 One last thing, I'm available for freelance work, so feel free
                 to reach out and say hello! I promise I don't bite 😉
               </p>
@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="Experience bg-[#f9fafb] w-full flex m-auto">
+      <section className="Experience bg-[#f9fafb] w-full flex m-auto dark:bg-[#111827]">
         <div className="w-full md:w-fit p-4 flex gap-12 flex-col m-auto">
           <div className="gap-4 flex flex-col ">
             <div className="justify-center items-center flex">
@@ -228,99 +228,111 @@ export default function Home() {
               <TopicD text="Here is a quick summary of my most recent experiences:" />
             </div>
           </div>
-          <div className="w-full rounded-xl bg-[#fff] shadow-sm p-8">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
             <div className="m-auto">
-              <div className="flex gap-12 ">
+              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
                 <div>
                   <Upworks />
                 </div>
-                <div className="flex flex-col">
-                  <div className="flex flex-col gap-4">
-                    <div className="font-semibold text-xl">
-                      <h1>Sr. Frontend Developer</h1>
-                    </div>
-                    <div className="text-[#4b5563] font-normal text-base">
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
-                      <li>
-                        Ut pretium arcu et massa semper, id fringilla leo
-                        semper.
-                      </li>
-                      <li>Sed quis justo ac magna.</li>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
+                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
+                  <div className="flex flex-col">
+                    <div className="flex flex-col gap-4">
+                      <div className="font-semibold text-xl">
+                        <h1>Sr. Frontend Developer</h1>
+                      </div>
+                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                        <li>
+                          Ut pretium arcu et massa semper, id fringilla leo
+                          semper.
+                        </li>
+                        <li>Sed quis justo ac magna.</li>
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                      </div>
                     </div>
                   </div>
+                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
                 </div>
-                <div>Nov 2021 - Present</div>
               </div>
             </div>
           </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
             <div className="m-auto">
-              <div className="flex gap-12">
+              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
                 <div>
                   <Upworks />
                 </div>
-                <div className="w-[384px] gap-4 flex flex-col">
-                  <div className="flex flex-col gap-4">
-                    <div className="font-semibold text-xl">
-                      <h1>Sr. Frontend Developer</h1>
-                    </div>
-                    <div className="text-[#4b5563] font-normal text-base">
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
-                      <li>
-                        Ut pretium arcu et massa semper, id fringilla leo
-                        semper.
-                      </li>
-                      <li>Sed quis justo ac magna.</li>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
+                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
+                  <div className=" gap-4 flex flex-col">
+                    <div className="flex flex-col gap-4">
+                      <div className="font-semibold text-xl">
+                        <h1>Sr. Frontend Developer</h1>
+                      </div>
+                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                        <li>
+                          Ut pretium arcu et massa semper, id fringilla leo
+                          semper.
+                        </li>
+                        <li>Sed quis justo ac magna.</li>
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                      </div>
                     </div>
                   </div>
+                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
                 </div>
-                <div>Nov 2021 - Present</div>
               </div>
             </div>
           </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8">
+          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
             <div className="m-auto">
-              <div className="flex gap-12">
+              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
                 <div>
                   <Upworks />
                 </div>
-                <div className="w-[384px] gap-4 flex flex-col">
-                  <div className="flex flex-col gap-4">
-                    <div className="font-semibold text-xl">
-                      <h1>Sr. Frontend Developer</h1>
-                    </div>
-                    <div className="text-[#4b5563] font-normal text-base">
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
-                      <li>
-                        Ut pretium arcu et massa semper, id fringilla leo
-                        semper.
-                      </li>
-                      <li>Sed quis justo ac magna.</li>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
+                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
+                  <div className=" gap-4 flex flex-col">
+                    <div className="flex flex-col gap-4">
+                      <div className="font-semibold text-xl">
+                        <h1>Sr. Frontend Developer</h1>
+                      </div>
+                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                        <li>
+                          Ut pretium arcu et massa semper, id fringilla leo
+                          semper.
+                        </li>
+                        <li>Sed quis justo ac magna.</li>
+                        <li>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </li>
+                      </div>
                     </div>
                   </div>
+                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
                 </div>
-                <div>Nov 2021 - Present</div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="Work gap-12 flex flex-col px-20 py-24 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">
+      <section className="Work gap-12 flex flex-col px-20 py-24  max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">
         <div className="gap-4 flex flex-col">
           <div className="justify-center items-center flex">
             <Topic text="Work" />
@@ -339,19 +351,19 @@ export default function Home() {
             <div className="justify-center items-center flex">
               <Topic text="Get in touch" />
             </div>
-            <div className="w-[576px] font-normal m-auto text-center text-xl flex justify-center items-center">
+            <div className="max-w-[576px] font-normal m-auto text-center text-xl flex justify-center items-center">
               <TopicD
                 text={`What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.`}
               />
             </div>
           </div>
-          <div className="flex flex-col font-semibold text-4xl justify-center items-center gap-4">
-            <div className="flex">
+          <div className=" flex flex-col font-semibold text-4xl justify-center items-center gap-4 max-w-[596px]">
+            <div className="flex max-sm:text-lg">
               <MSG />
               <h1>reachsagarshah@gmail.com</h1>
               <Copy />
             </div>
-            <div className="flex">
+            <div className="flex max-sm:text-lg">
               <Phone />
               <h1>+91 8980500565</h1>
               <Copy />
@@ -367,7 +379,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="px-6 py-24 bg-[#F9FAFB] w-full">
+      <footer className="px-6 py-24 bg-[#F9FAFB] w-full dark:bg-[#111827]">
         <div className="m-auto max-w-[1440px] h-[68px]">
           <div className="flex items-center justify-center gap-2 text-center">
             <div>
@@ -379,6 +391,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <section></section>
     </div>
   );
 }

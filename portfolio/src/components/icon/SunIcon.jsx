@@ -1,4 +1,4 @@
-export default function ThemeIcon() {
+export default function Sunicon() {
   return (
     <div>
       <svg
