@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <Layout className=" m-auto max-w-[1440px] py-4 px-20 text-center flex justify-center items-center justify-between">
       <div>Logo</div>
-      <div className="headerConText flex gap-6 items-center">
+      <nav className="headerConText flex gap-6 items-center">
         <ul className="headerListContainer flex gap-6 max-sm:hidden">
           {["Home", "About", "Testimonials", "Contact"].map((navItem) => {
             return (
@@ -44,7 +44,7 @@ export default function Navbar() {
             Download CV
           </button>
         </div>
-      </div>
+      </nav>
     </Layout>
   );
 }

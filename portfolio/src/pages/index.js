@@ -23,9 +23,6 @@ import Cypress from "../components/icon/iconcypress.png";
 import Storybook from "../components/icon/iconstorybook.png";
 import Git from "../components/icon/icongit.png";
 import Next from "../components/icon/iconnextjs.png";
-import BoxIMG from "@/components/Box";
-import Tags from "@/components/Tags";
-import IconB from "@/components/IconsB";
 import BoxC from "@/components/BoxI";
 import BoxW from "@/components/BoxW";
 import MSG from "@/components/messegIcon";
@@ -132,14 +129,14 @@ export default function Home() {
               <SocialI />
             </div>
           </div>
-          <div className="m-auto max-w-[280px]  shrink-0 flex">
+          <div className="m-auto max-w-[280px]  shrink-0 flex shadow-2xl">
             <SagarIMG />
           </div>
         </div>
       </section>
       <section className="AboutMe dark:bg-[#111827]">
         <div className="flex flex-col gap-12 bg-[#F9FAFB] dark:bg-[#111827] max-sm:px-4 max-sm:py-16 px-20 py-24 m-auto max-w-[1440px]">
-          <div className="justify-center items-center flex ">
+          <div className="justify-center items-center flex" id="AboutMe">
             <Topic text="About me" />
           </div>
           <div className="flex-wrap flex justify-center gap-12">
@@ -203,9 +200,9 @@ export default function Home() {
       </section>
       <section className="Skills">
         <div className="px-20 py-24 gap-12 max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px]">
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 overflow-hidden">
             <div className="flex flex-col gap-4">
-              <div className="justify-center items-center flex">
+              <div className="justify-center items-center flex" id="SkillS">
                 <Topic text="Skills" />
               </div>
               <div>
@@ -221,7 +218,7 @@ export default function Home() {
       <section className="Experience bg-[#f9fafb] w-full flex m-auto dark:bg-[#111827]">
         <div className="w-full md:w-fit p-4 flex gap-12 flex-col m-auto">
           <div className="gap-4 flex flex-col ">
-            <div className="justify-center items-center flex">
+            <div className="justify-center items-center flex" id="Experience">
               <Topic text="Experience" />
             </div>
             <div>
@@ -334,7 +331,7 @@ export default function Home() {
       </section>
       <section className="Work gap-12 flex flex-col px-20 py-24  max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">
         <div className="gap-4 flex flex-col">
-          <div className="justify-center items-center flex">
+          <div className="justify-center items-center flex" id="work">
             <Topic text="Work" />
           </div>
           <div>
@@ -348,7 +345,7 @@ export default function Home() {
       <section className="GetInTouch max-sm:px-4 max-sm:py-16 px-20 py-24">
         <div className="px-8 flex flex-col justify-center items-center gap-12 m-auto max-w-[1440px]">
           <div className="flex flex-col gap-4">
-            <div className="justify-center items-center flex">
+            <div className="justify-center items-center flex" id="GetInTouch">
               <Topic text="Get in touch" />
             </div>
             <div className="max-w-[576px] font-normal m-auto text-center text-xl flex justify-center items-center">
@@ -358,7 +355,7 @@ export default function Home() {
             </div>
           </div>
           <div className=" flex flex-col font-semibold text-4xl justify-center items-center gap-4 max-w-[596px]">
-            <div className="flex max-sm:text-lg">
+            <div className="flex">
               <MSG />
               <h1>reachsagarshah@gmail.com</h1>
               <Copy />
