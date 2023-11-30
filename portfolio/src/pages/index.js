@@ -354,7 +354,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className=" flex flex-col font-semibold text-4xl justify-center items-center gap-4 max-w-[596px]">
+          <div className=" flex max-sm:text-lg flex-col font-semibold text-4xl justify-center items-center gap-4 max-w-[596px]">
             <div className="flex">
               <MSG />
               <h1>reachsagarshah@gmail.com</h1>
