@@ -1,7 +1,6 @@
 import BoxIMG from "./Box";
 import IconB from "./IconsB";
 import Tags from "./Tags";
-import Topic from "./Topic";
 import TopicD from "./TopicD";
 
 export default function BoxC() {
