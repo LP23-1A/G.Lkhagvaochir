@@ -7,7 +7,7 @@ export default function Upworks() {
       viewBox="0 0 102 28"
       fill="none"
     >
-      <g clip-path="url(#clip0_325_184)">
+      <g clipPath="url(#clip0_325_184)">
         <mask
           id="mask0_325_184"
           style={{ maskType: "luminance" }}

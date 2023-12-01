@@ -170,12 +170,12 @@ export default function Home() {
             </div>
           </div>
           <div className=" flex max-sm:text-lg flex-col font-semibold text-4xl justify-center items-center gap-4 max-w-[596px]">
-            <div className="flex">
+            <div className="flex items-center gap-2">
               <MSG />
               <h1>reachsagarshah@gmail.com</h1>
               <Copy />
             </div>
-            <div className="flex max-sm:text-lg">
+            <div className="flex max-sm:text-lg items-center gap-2">
               <Phone />
               <h1>+91 8980500565</h1>
               <Copy />
