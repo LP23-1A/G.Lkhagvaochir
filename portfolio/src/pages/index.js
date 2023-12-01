@@ -4,99 +4,15 @@ import SagarIMG from "@/components/Sagar";
 import SocialI from "@/components/icon/Socialicon";
 import SagarRed from "@/components/Sagarred";
 import Topic from "@/components/Topic";
-import IconsS from "@/components/IconsS";
 import TopicD from "@/components/TopicD";
-import Upworks from "@/components/Upwork";
-import Typescript from "../components/icon/typescript.png";
-import React from "../components/icon/science.png";
-import Node from "../components/icon/iconnodejs.png";
-import Express from "../components/icon/iconexpress.png";
-import Java from "../components/icon/js.png";
-import Nest from "../components/icon/iconnest.png";
-import Socket from "../components/icon/iconsocket.png";
-import Postgre from "../components/icon/iconpostgresql.png";
-import MongoDB from "../components/icon/iconmongodb.png";
-import Sass from "../components/icon/iconsass.png";
-import Tailwindcss from "../components/icon/icontailwindcss.png";
-import Figma from "../components/icon/iconfigma.png";
-import Cypress from "../components/icon/iconcypress.png";
-import Storybook from "../components/icon/iconstorybook.png";
-import Git from "../components/icon/icongit.png";
-import Next from "../components/icon/iconnextjs.png";
 import BoxC from "@/components/BoxI";
 import BoxW from "@/components/BoxW";
 import MSG from "@/components/messegIcon";
 import Copy from "@/components/CopyIcon";
 import Phone from "@/components/Phoneicon";
 import C from "@/components/Cicon";
-
-const skills = [
-  {
-    image: Java,
-    text: "JavaScript",
-  },
-  {
-    image: Typescript,
-    text: "Typescript",
-  },
-
-  {
-    image: React,
-    text: "React",
-  },
-  {
-    image: Next,
-    text: "Next",
-  },
-  {
-    image: Node,
-    text: "Node",
-  },
-  {
-    image: Express,
-    text: "Express",
-  },
-  {
-    image: Nest,
-    text: "Nest",
-  },
-  {
-    image: Socket,
-    text: "Socket",
-  },
-  {
-    image: Postgre,
-    text: "Postgre",
-  },
-  {
-    image: MongoDB,
-    text: "MongoDB",
-  },
-  {
-    image: Sass,
-    text: "Sass",
-  },
-  {
-    image: Tailwindcss,
-    text: "Tailwindcss",
-  },
-  {
-    image: Figma,
-    text: "Figma",
-  },
-  {
-    image: Cypress,
-    text: "Cypress",
-  },
-  {
-    image: Storybook,
-    text: "Storybook",
-  },
-  {
-    image: Git,
-    text: "Git",
-  },
-];
+import ExperienceBox from "@/components/ExperienceBox";
+import SkillsFu from "@/components/SkillsFu";
 
 export default function Home() {
   return (
@@ -185,7 +101,7 @@ export default function Home() {
                   <li>B.E. in Computer Engineering</li>
                   <li>Full time freelancer</li>
                 </div>
-                <div className="text-base font-normal text-[#4b5563]dark:text-[#D1D5DB] ">
+                <div className="text-base font-normal text-[#4b5563] dark:text-[#D1D5DB] ">
                   <li>Avid learner</li>
                   <li>Aspiring indie hacker</li>
                 </div>
@@ -210,7 +126,7 @@ export default function Home() {
               </div>
             </div>
             <div className="m-auto  gap-12  text-center">
-              <IconsS skills={skills} />
+              <SkillsFu />
             </div>
           </div>
         </div>
@@ -225,108 +141,9 @@ export default function Home() {
               <TopicD text="Here is a quick summary of my most recent experiences:" />
             </div>
           </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
-            <div className="m-auto">
-              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
-                <div>
-                  <Upworks />
-                </div>
-                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
-                  <div className="flex flex-col">
-                    <div className="flex flex-col gap-4">
-                      <div className="font-semibold text-xl">
-                        <h1>Sr. Frontend Developer</h1>
-                      </div>
-                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                        <li>
-                          Ut pretium arcu et massa semper, id fringilla leo
-                          semper.
-                        </li>
-                        <li>Sed quis justo ac magna.</li>
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
-            <div className="m-auto">
-              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
-                <div>
-                  <Upworks />
-                </div>
-                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
-                  <div className=" gap-4 flex flex-col">
-                    <div className="flex flex-col gap-4">
-                      <div className="font-semibold text-xl">
-                        <h1>Sr. Frontend Developer</h1>
-                      </div>
-                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                        <li>
-                          Ut pretium arcu et massa semper, id fringilla leo
-                          semper.
-                        </li>
-                        <li>Sed quis justo ac magna.</li>
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
-            <div className="m-auto">
-              <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
-                <div>
-                  <Upworks />
-                </div>
-                <div className="flex max-sm:flex-col-reverse gap-12 max-sm:gap-4">
-                  <div className=" gap-4 flex flex-col">
-                    <div className="flex flex-col gap-4">
-                      <div className="font-semibold text-xl">
-                        <h1>Sr. Frontend Developer</h1>
-                      </div>
-                      <div className="text-[#4b5563] font-normal text-base dark:text-[#D1D5DB]">
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                        <li>
-                          Ut pretium arcu et massa semper, id fringilla leo
-                          semper.
-                        </li>
-                        <li>Sed quis justo ac magna.</li>
-                        <li>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </li>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="dark:text-[#D1D5DB]">Nov 2021 - Present</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ExperienceBox />
+          <ExperienceBox />
+          <ExperienceBox />
         </div>
       </section>
       <section className="Work gap-12 flex flex-col px-20 py-24  max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">

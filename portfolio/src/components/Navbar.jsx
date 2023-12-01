@@ -18,7 +18,7 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <Layout className=" m-auto max-w-[1440px] py-4 px-20 text-center flex justify-center items-center justify-between">
+    <Layout className=" m-auto max-w-[1440px] py-4 px-20 text-center flex  items-center justify-between">
       <div>Logo</div>
       <nav className="headerConText flex gap-6 items-center">
         <ul className="headerListContainer flex gap-6 max-sm:hidden">
