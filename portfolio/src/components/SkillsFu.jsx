@@ -19,75 +19,90 @@ import { v4 as uuidv4 } from "uuid";
 
 const skills = [
   {
+    id: uuidv4(),
     image: Java,
     text: "JavaScript",
   },
   {
+    id: uuidv4(),
     image: Typescript,
     text: "Typescript",
   },
 
   {
+    id: uuidv4(),
     image: React,
     text: "React",
   },
   {
+    id: uuidv4(),
     image: Next,
     text: "Next",
   },
   {
+    id: uuidv4(),
     image: Node,
     text: "Node",
   },
   {
+    id: uuidv4(),
     image: Express,
     text: "Express",
   },
   {
+    id: uuidv4(),
     image: Nest,
     text: "Nest",
   },
   {
+    id: uuidv4(),
     image: Socket,
     text: "Socket",
   },
   {
+    id: uuidv4(),
     image: Postgre,
     text: "Postgre",
   },
   {
+    id: uuidv4(),
     image: MongoDB,
     text: "MongoDB",
   },
   {
+    id: uuidv4(),
     image: Sass,
     text: "Sass",
   },
   {
+    id: uuidv4(),
     image: Tailwindcss,
     text: "Tailwindcss",
   },
   {
+    id: uuidv4(),
     image: Figma,
     text: "Figma",
   },
   {
+    id: uuidv4(),
     image: Cypress,
     text: "Cypress",
   },
   {
+    id: uuidv4(),
     image: Storybook,
     text: "Storybook",
   },
   {
+    id: uuidv4(),
     image: Git,
     text: "Git",
   },
 ];
 export default function SkillsFu() {
-  let key = uuidv4();
   return (
-    <div key={key}>
+    <div>
       <IconsS skills={skills} />
     </div>
   );

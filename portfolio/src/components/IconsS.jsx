@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 export default function IconsS({ skills }) {
   return (
     <div className="w-screen ml-[-100px]">
@@ -11,7 +12,7 @@ export default function IconsS({ skills }) {
         <div className="flex gap-16">
           {skills.map((skill) => {
             return (
-              <div>
+              <div key={skill.id}>
                 <div>
                   <img className="lilIcons" src={skill.image.src} alt="" />
                   <p>{skill.text}</p>
@@ -23,7 +24,7 @@ export default function IconsS({ skills }) {
         <div className="flex gap-16">
           {skills.map((skill) => {
             return (
-              <div>
+              <div key={skill.id + 1}>
                 <div>
                   <img className="lilIcons" src={skill.image.src} alt="" />
                   <p>{skill.text}</p>

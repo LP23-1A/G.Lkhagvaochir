@@ -2,18 +2,21 @@ import Upworks from "./Upwork";
 import { v4 as uuidv4 } from "uuid";
 const data = [
   {
+    id: uuidv4(),
     text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     text2: "Ut pretium arcu et massa semper, id fringilla leosemper",
     text3: "Sed quis justo ac magna.",
     text4: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
+    id: uuidv4(),
     text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     text2: "Ut pretium arcu et massa semper, id fringilla leosemper",
     text3: "Sed quis justo ac magna.",
     text4: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
+    id: uuidv4(),
     text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     text2: "Ut pretium arcu et massa semper, id fringilla leosemper",
     text3: "Sed quis justo ac magna.",
@@ -23,9 +26,8 @@ const data = [
 
 export default function ExperienceBox() {
   return data.map((e) => {
-    let key = uuidv4();
     return (
-      <div className="experience-box" key={key}>
+      <div className="experience-box" key={e.id}>
         <div className="rounded-xl bg-[#fff] shadow-sm p-8 dark:bg-[#1F2937]">
           <div className="m-auto">
             <div className="flex gap-12 max-sm:gap-4 max-sm:flex-col">
