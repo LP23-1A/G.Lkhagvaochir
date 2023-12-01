@@ -142,8 +142,6 @@ export default function Home() {
             </div>
           </div>
           <ExperienceBox />
-          <ExperienceBox />
-          <ExperienceBox />
         </div>
       </section>
       <section className="Work gap-12 flex flex-col px-20 py-24  max-sm:px-4 max-sm:py-16 m-auto max-w-[1440px] sm:px-4 sm:py-16 ">

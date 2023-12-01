@@ -15,6 +15,7 @@ import Storybook from "../components/icon/iconstorybook.png";
 import Git from "../components/icon/icongit.png";
 import Next from "../components/icon/iconnextjs.png";
 import IconsS from "./IconsS";
+import { v4 as uuidv4 } from "uuid";
 
 const skills = [
   {
@@ -84,8 +85,9 @@ const skills = [
   },
 ];
 export default function SkillsFu() {
+  let key = uuidv4();
   return (
-    <div>
+    <div key={key}>
       <IconsS skills={skills} />
     </div>
   );
