@@ -14,7 +14,7 @@ const CloseIcon = () => {
         stroke="#4B5563"
         strokeWidth="2"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12 12L24 24"
