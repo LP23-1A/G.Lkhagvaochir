@@ -1,5 +1,8 @@
 import Blog1 from "@/images/Blog1.png";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
+
+const api = "";
 
 const data = [
   {
@@ -37,7 +40,7 @@ const data = [
   {
     id: uuidv4(),
     img: Blog1,
-    title: "Technology",
+    title: "Software",
     description:
       "The Impact of Technology on the Workplace: How Technology is Changing",
     date: "August 20, 2022",
@@ -106,7 +109,7 @@ export default function AllBlog() {
                 <div className="flex flex-col ">
                   <a
                     href="Technology"
-                    className="rounded-[1.5px] px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center max-w-[95px] items-center"
+                    className="rounded-md px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center max-w-[95px] items-center"
                   >
                     {e.title}
                   </a>
