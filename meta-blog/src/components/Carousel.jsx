@@ -1,40 +1,56 @@
-import BlackN from "@/images/Image.png";
-import Back from "@/icons/back.png";
-import Forward from "@/icons/forward.png";
-export default function Carousel() {
+import { useEffect, useState } from "react";
+import Tag from "./Tag";
+
+const Carousel = ({ articles }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const increment = () => {
+    if (activeIndex === 2) {
+      setActiveIndex(0);
+      return;
+    }
+    setActiveIndex((prev) => prev + 1);
+  };
+
+  const decrement = () => {
+    if (activeIndex === 0) {
+      setActiveIndex(2);
+      return;
+    }
+    setActiveIndex((prev) => prev - 1);
+  };
+
   return (
-    <div>
-      <div
-        className="max-w-[1216px] h-[600px] m-auto shrink p-3 relative"
-        style={{ backgroundImage: `url(${BlackN.src})` }}
-      >
-        <div className="bg-[white] w-[598px] h-[252px] items-start flex flex-col p-10 gap-6 border-solid border rounded-xl absolute top-[335px]">
-          <div className="flex flex-col gap-4">
-            <div className="flex px-[10px] py-1 max-w-[86px] gap-1 rounded-md bg-[#4B6BFB] text-[12px] font-medium text-[#fff]">
-              Technology
-            </div>
-            <p className="text-[#181A2A] text-[36px] font-semibold">
-              Grid system for better <br />
-              Design User Interface
+    <div className="gap-4 flex flex-col">
+      {articles.length != 0 && (
+        <div className="w-[1216px] relative text-black rounded-lg m-auto">
+          <img
+            src={articles[activeIndex].social_image}
+            className="w-full min-h-[600px] rounded-lg"
+          />
+          <div className="bg-white rounded-lg absolute left-0 bottom-0 p-10 max-w-[518px] m-3 border border-[#E8E8EA]">
+            <Tag color={articles[activeIndex]?.flare_tag?.bg_color_hex}>
+              {articles[activeIndex]?.flare_tag?.name?.toUpperCase()}
+            </Tag>
+
+            <h1 className="text-[36px] font-semibold">
+              {articles[activeIndex].title}
+            </h1>
+            <p className="text-[#97989F]">
+              {Date(articles[activeIndex].published_at)}
             </p>
           </div>
-          <div className="text-[#97989F] text-[16px] font-normal">
-            August 20, 2022
-          </div>
         </div>
+      )}
+      <div className="flex justify-center gap-4 ">
+        <button className="rounded-xl border p-2" onClick={decrement}>
+          Prev
+        </button>
+        <button className="rounded-xl border p-2" onClick={increment}>
+          Next
+        </button>
       </div>
-      <button className="w-[100px] m-auto flex justify-end">
-        <img
-          className="rounded border-solid border-2 p-[20px]"
-          src={Back.src}
-          alt=""
-        />
-        <img
-          className="rounded border-solid border-2 p-[20px]"
-          src={Forward.src}
-          alt=""
-        />
-      </button>
     </div>
   );
-}
+};
+
+export default Carousel;
