@@ -6,14 +6,14 @@ export default function Sorts() {
       </div>
       <div className="flex justify-between text-[12px] text-[#495057] font-bold">
         <div className="gap-5 flex ">
-          <a href="" className="text-[#D4A373]">
+          <a href="All" className="text-[#D4A373]">
             All
           </a>
-          <a href="">Design</a>
-          <a href="">Travel</a>
-          <a href="">Fashion</a>
-          <a href="">Technology</a>
-          <a href="">Branding</a>
+          <a href="Desing">Design</a>
+          <a href="Travel">Travel</a>
+          <a href="Fashion">Fashion</a>
+          <a href="Technology">Technology</a>
+          <a href="Branding">Branding</a>
         </div>
         <div>
           <p>View All</p>

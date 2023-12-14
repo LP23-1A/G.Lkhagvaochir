@@ -4,8 +4,6 @@ import { headers } from "../../next.config";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-=======
-
 
 export default function contact() {
   const [data, setData] = useState({ published: true });
@@ -22,18 +20,15 @@ export default function contact() {
   };
 
   const postMessage = async () => {
-
-  const sendRequest = async () => {
-
-    let response = await axios.post("https://dev.to/api/articles", data);
-    headers: {
-      // "api-key": "YOUR_API_KEY",
-      // ContentType:
-    }
+    const sendRequest = async () => {
+      let response = await axios.post("https://dev.to/api/articles", data);
+      headers: {
+        // "api-key": "YOUR_API_KEY",
+        // ContentType:
+      }
+    };
   };
-  console.log(data);
   return (
-
     <div className="flex flex-col gap-[100px]">
       <Navbar />
       <div className=" m-auto max-w-[769px] gap-5 flex flex-col pb-7">
@@ -103,39 +98,6 @@ export default function contact() {
       <div className="bg-[#F6F6F7]">
         <Footer />
       </div>
-
-    <div>
-      <div className="flex h-[1230px]">
-        <div className="flex flex-col gap-3 w-[400px] h-[300px] m-auto border-1 rounded-md bg-slate-50">
-          <input
-            onChange={(el) => handlerInput(el, "title")}
-            placeholder="title"
-            className="p-2 flex flex-col"
-          ></input>
-          <input
-            onChange={(el) => handlerInput(el, "tags")}
-            placeholder="tags"
-            className=" p-2 flex flex-col"
-          ></input>
-          <input
-            onChange={(el) => handlerInput(el, "body_markdown")}
-            placeholder="description"
-            className="p-2 h-[600px]"
-          ></input>
-          <input
-            onChange={(el) => handlerInput(el, "series")}
-            placeholder="series"
-            className=" p-2 flex flex-col"
-          ></input>
-          <button
-            onClick={sendRequest()}
-            className="bg-[black] text-[white] p-2"
-          >
-            sumbit
-          </button>
-        </div>
-      </div>
-
     </div>
   );
 }
