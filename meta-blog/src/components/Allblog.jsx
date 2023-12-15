@@ -36,12 +36,9 @@ export default function AllBlog({ isAllBlog }) {
                     <div className="flex gap-5 flex-col">
                       <img src={e.social_image} alt="" />
                       <div className="flex flex-col ">
-                        <a
-                          href="Technology"
-                          className="rounded-md px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center w-fit items-center"
-                        >
+                        <p className="rounded-md px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center w-fit items-center">
                           {e.tags}
-                        </a>
+                        </p>
                         <p className="text-[#181A2A] text-[24px] font-semibold overflow-hidden h-[144px]">
                           {e.description}
                         </p>
@@ -65,12 +62,9 @@ export default function AllBlog({ isAllBlog }) {
                     <div className="flex gap-5 flex-col">
                       <img src={e.social_image} alt="" />
                       <div className="flex flex-col ">
-                        <a
-                          href="Technology"
-                          className="rounded-md px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center w-fit items-center"
-                        >
+                        <p className="rounded-md px-[5px] py-1 text-[#4B6BFB] bg-[#f1f1f5] text-center justify-center w-fit items-center">
                           {e.tags}
-                        </a>
+                        </p>
                         <p className="text-[#181A2A] text-[24px] font-semibold overflow-hidden h-[144px]">
                           {e.description}
                         </p>

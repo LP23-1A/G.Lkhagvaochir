@@ -45,7 +45,7 @@ const Carousel = ({ articles }) => {
         <button className="rounded-xl border p-2" onClick={decrement}>
           Prev
         </button>
-        <button className="rounded-xl border p-2" onClick={increment}>
+        <button className="rounded-xl border p-6`" onClick={increment}>
           Next
         </button>
       </div>
