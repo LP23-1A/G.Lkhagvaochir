@@ -16,34 +16,17 @@ app.listen(PORT, (req, res) => {
   console.log(`App running on port ${PORT}.`);
 });
 
-// app.get("/users", async (req, res) => {
-//   try {
-//     const queryText = `SELECT * FROM users`;
-//     const response = await pool.query(queryText);
-//     res.send(response.rows);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
-// app.get("/users", async (req, res) => {
-//   const { name, email } = req.body;
-//   try {
-//     const queryText = `SELECT * FROM users WHERE name='${name}' AND email='${email}'`;
-//     const response = await pool.query(queryText);
-//     res.send(response.rows);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
-
 app.post("/createTable", async (_, res) => {
   try {
     const tableQueryText = `
     CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
-      name VARCHAR(255) NOT NULL,
-      email VARCHAR(255) NOT NULL
+      name VARCHAR(50) NOT NULL,
+      email VARCHAR(50) NOT NULL,
+      avatar_img BYTEA,
+      createAt TIMESTAMP,
+      updateAt TIMESSTAMP,
+      currency_type TEXT DEFAULT 'MNT'
     )`;
     await pool.query(tableQueryText);
     res.send("ok");
@@ -52,40 +35,3 @@ app.post("/createTable", async (_, res) => {
     res.send("Error creating table");
   }
 });
-
-// app.post("/user", async (req, response) => {
-//   const { name, email } = req.body;
-//   console.log(name, email, "req.body");
-//   try {
-//     const queryText =
-//       "INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *";
-//     const res = await pool.query(queryText, [name, email]);
-//     response.send(res.rows[0]);
-//   } catch (error) {
-//     console.error(error);
-//     response.send("error query");
-//   }
-// });
-// app.delete("/users", async (req, res) => {
-//   const { name, email, id } = req.body;
-//   try {
-//     const queryText = `DELETE FROM users WHERE (name ='${name}' AND email = '${email}') OR id = '${id}'`;
-//     await pool.query(queryText);
-//     res.send("ok");
-//   } catch (error) {
-//     res.send("error").end();
-//     console.error(error);
-//   }
-// });
-// app.put("/user", async (req, res) => {
-//   const { name, email, id } = req.body;
-
-//   try {
-//     const queryText = `UPDATE users SET name = '${name}', email='${email}' WHERE id = '${id}'`;
-//     await pool.query(queryText);
-//     res.send("Update");
-//   } catch (error) {
-//     res.send("error").end();
-//     console.error(error);
-//   }
-// });
