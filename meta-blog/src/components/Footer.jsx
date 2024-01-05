@@ -5,7 +5,7 @@ import link from "@/icons/link.png";
 import Logo from "@/icons/Logo.png";
 export default function Footer() {
   return (
-    <div className="container max-w-[1230px] m-auto pt-16">
+    <div className="container w-full m-auto pt-16">
       <div className="content flex items-start m-auto pb-6">
         <div className="flex flex-col gap-6 max-w-[289px] items-start">
           <div className="flex flex-col gap-3">
@@ -27,9 +27,9 @@ export default function Footer() {
         </div>
         <div className="flex flex-col w-[521px] gap-20 items-center">
           <div className="text-[16px] text-[#696A75] font-normal  gap-2 item items-start flex flex-col">
-            <p>Home</p>
-            <p>Blog</p>
-            <p>Contact</p>
+            <a href="/">Home</a>
+            <a href="blog">Blog</a>
+            <a href="contact">Contact</a>
           </div>
         </div>
         <div className="flex gap-5 w-[16px] h-[16px] shrink-0">
