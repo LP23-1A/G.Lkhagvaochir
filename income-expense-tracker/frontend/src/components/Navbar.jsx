@@ -4,15 +4,16 @@ export default function Navbar() {
   return (
     <div className="flex justify-between">
       <div className="flex gap-6">
-        <div>
+        <a href="/">
           <Geld />
-        </div>
+        </a>
         <div>Dashboard</div>
         <div>Records</div>
       </div>
       <div className="flex gap-6">
         <div>Record</div>
         <div>img</div>
+        <div></div>
       </div>
     </div>
   );

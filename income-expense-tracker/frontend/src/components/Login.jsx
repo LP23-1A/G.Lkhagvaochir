@@ -1,6 +1,6 @@
+import ButtonL from "@/components/ButtonL";
+import LinkButton from "@/components/LinkButton";
 import Geld from "@/images/Geld";
-import ButtonL from "./ButtonL";
-import LinkButton from "./LinkButton";
 
 export default function Login() {
   return (
@@ -31,7 +31,6 @@ export default function Login() {
         </div>
         <div className="flex gap-3">
           <p>Don't have account?</p>
-          <LinkButton text="Sign up" />
         </div>
       </div>
       <div className="bg-[#0166FF] w-1/2 h-[100vh]"></div>

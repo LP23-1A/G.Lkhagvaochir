@@ -3,12 +3,14 @@ import dotenv from "dotenv";
 import bp from "body-parser";
 import { pool } from "./db.js";
 import { user } from "./router/user.js";
+import cors from "cors";
 
 dotenv.config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(bp.json());
+app.use(cors({ origin: "*" }));
 
 app.use("/users", user);
 
@@ -23,9 +25,10 @@ app.post("/createTable", async (_, res) => {
       id SERIAL PRIMARY KEY,
       name VARCHAR(50) NOT NULL,
       email VARCHAR(50) NOT NULL,
+      password VARCHAR(50) NOT NULL,
       avatar_img BYTEA,
       createAt TIMESTAMP,
-      updateAt TIMESSTAMP,
+      updateAt TIMESTAMP,
       currency_type TEXT DEFAULT 'MNT'
     )`;
     await pool.query(tableQueryText);

@@ -1,11 +1,11 @@
-import Login from "@/components/Login";
-import Navbar from "@/components/Navbar";
-import Signup from "@/components/Signup";
+"use client";
+import Login from "@/app/Login/page.js";
 
 export default function Home() {
   return (
     <section>
-      <Signup />
+      <Login />
+      img
     </section>
   );
 }

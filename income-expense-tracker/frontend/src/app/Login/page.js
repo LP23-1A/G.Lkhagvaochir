@@ -1,8 +1,10 @@
+"use client";
+import ButtonL from "@/components/ButtonL";
 import Geld from "@/images/Geld";
-import ButtonL from "./ButtonL";
-import LinkButton from "./LinkButton";
+import { useRouter } from "next/navigation";
 
-export default function Signup() {
+export default function Login() {
+  const router = useRouter();
   return (
     <div className="flex">
       <div className="flex justify-center items-center flex-col gap-10 w-1/2">
@@ -13,15 +15,10 @@ export default function Signup() {
           <div>Geld</div>
         </div>
         <div className="flex flex-col items-center">
-          <div>Create Geld account</div>
-          <div>Sign up below to create your Wallet account</div>
+          <div>Welcome Back</div>
+          <div>Welcome back, Please enter your details</div>
         </div>
         <div className="flex flex-col gap-4">
-          <input
-            placeholder="Name"
-            className="bg-[#F3F4F6] h-[48px] p-4 rounded-lg border"
-            type="text"
-          />
           <input
             placeholder="Email"
             className="bg-[#F3F4F6] h-[48px] p-4 rounded-lg border"
@@ -32,16 +29,16 @@ export default function Signup() {
             className="bg-[#F3F4F6] h-[48px] p-4 rounded-lg border"
             type="password"
           />
-          <input
-            placeholder="Re-password"
-            className="bg-[#F3F4F6] h-[48px] p-4 rounded-lg border"
-            type="password"
-          />
-          <ButtonL text="Sign up" />
+          <ButtonL text="Login" />
         </div>
         <div className="flex gap-3">
-          <p>Already have account?</p>
-          <LinkButton text="Log in" />
+          <p>Don't have account?</p>
+          <button
+            className="text-[#0166FF] rounded-3xl"
+            onClick={() => router.push("/Signup")}
+          >
+            Sign up
+          </button>
         </div>
       </div>
       <div className="bg-[#0166FF] w-1/2 h-[100vh]"></div>
