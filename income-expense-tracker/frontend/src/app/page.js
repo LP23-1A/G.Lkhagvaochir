@@ -1,11 +1,11 @@
 "use client";
-import Login from "@/app/Login/page.js";
+
+import Doughnut from "@/components/Doughnut";
 
 export default function Home() {
   return (
     <section>
-      <Login />
-      img
+      <Doughnut />
     </section>
   );
 }

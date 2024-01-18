@@ -1,6 +1,6 @@
 import ButtonL from "@/components/ButtonL";
+import Check from "@/images/Check";
 import Geld from "@/images/Geld";
-import Money from "@/images/Money";
 
 export default function step1() {
   return (
@@ -12,17 +12,15 @@ export default function step1() {
       <div>
         <ul class="steps">
           <li class="step step-primary">Currency</li>
-          <li class="step">Balance</li>
-          <li class="step">Finish</li>
+          <li class="step step-primary">Balance</li>
+          <li class="step step-primary">Finish</li>
         </ul>
       </div>
       <div className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center gap-4">
           <div className="flex absolute bg-[#0166FF] rounded-[100px] w-[40px] h-[40px]"></div>
-          <Money />
-          <p className="text-[20px] text-[#0F172A] font-semibold">
-            Select base currency
-          </p>
+          <Check />
+          <p className="text-[20px] text-[#0F172A] font-semibold">Good Job!</p>
         </div>
         <div>
           <select class="select select-bordered w-full max-w-xs m-auto">
@@ -35,11 +33,11 @@ export default function step1() {
         </div>
         <div>
           <p className="text-[12px] text-[#475569] font-normal">
-            Your base currency should be the one you use most often. All <br />
-            transaction in other currencies will be calculated based on this one
+            Your very first account has been created. Now <br /> continue to
+            dashboard and start tracking
           </p>
         </div>
-        <ButtonL text="Confirm" />
+        <ButtonL text="Go to Dashboard" />
       </div>
     </div>
   );

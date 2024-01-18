@@ -1,6 +1,5 @@
 "use client";
 import Geld from "@/images/Geld";
-import ButtonL from "@/components/ButtonL";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { useState } from "react";
